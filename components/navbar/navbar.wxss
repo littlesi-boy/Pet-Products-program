@@ -1,0 +1,24 @@
+.navbar {
+  white-space: nowrap;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 48rpx;
+}
+
+.navbar .item {
+  margin: 20rpx;
+  display: inline-block;
+  width: 110rpx;
+  height: 48rpx;
+  border-radius: 60rpx;
+}
+
+.navbar .item.activeYes {
+  color: #202020;
+  font-weight: 800;
+  background: #FFDD00;
+}
+.navbar .item.activeNo {
+  color: #707070;
+  font-weight: 800;
+}

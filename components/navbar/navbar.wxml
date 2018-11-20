@@ -1,0 +1,8 @@
+<template name="navbar">
+  <scroll-view class='navbar' scroll-x="true" style="width: 100%">
+    <view data-id="{{item.id}}" wx:for="{{menus}}" 
+    data-data='{{item.name}}'
+    data-types="{{item.type}}"
+    wx:key="{{item.id}}" class="item {{currentTab==item.id ? 'activeYes' : 'activeNo'}}" bindtap="navbarTap">{{item.name}}</view>
+  </scroll-view>
+</template>

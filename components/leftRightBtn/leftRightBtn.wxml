@@ -1,0 +1,12 @@
+<view class="cell">
+  <view class="cellLeft text_AlignLeft" style="padding-left:{{paddingLeft}}">
+    <view bindtap="leftBtn" class="{{leftBtnClass}}" style="color:{{leftBtnFontColor}};background:{{leftBtnBg}}" >
+      {{leftBtnFont}}
+    </view>
+  </view>
+  <view class="cellRight text_AlignRight" style="padding-left:{{paddingRight}};">
+    <view bindtap="rightBtn" style="color:{{rightBtnFontColor}}">
+      {{rightBtnFont}}
+    </view>
+  </view>
+</view>

@@ -1,0 +1,18 @@
+.page-end,
+.page-loading,
+.page-error{
+  font-size:24rpx;
+  line-height:60rpx;
+  text-align:center;
+  color:#999;
+  padding-top:20rpx;
+  padding-bottom:20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: #fff; */
+}
+.loading-icon{
+  width: 40rpx;
+  height: 40rpx;
+}

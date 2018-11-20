@@ -1,0 +1,23 @@
+
+.center_View{width: 100%;}
+.center_Btn{
+    width: 300rpx;
+    height: 80rpx;
+    margin: 0 auto;
+    border-radius: 40rpx;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20rpx;
+}
+.text{font-weight: bold;text-align: center; justify-content: center;}
+
+/* 未处理样式 */
+.center_BtnOkMoreChange{ background: #FFE852;color: #202020;font-size: 36rpx}
+
+/* 已处理样式 */
+.center_BtnNoMoreChange{ background: #ADADAD;color: #FFFFFF;font-size: 36rpx;}
+
+.center_Btn575757{ background: #575757;color: #FFFFFF;font-size: 36rpx;box-shadow: #CECECE;}
+.set_AddScatter{background: #FFE852;color: #202020;font-size: 36rpx}

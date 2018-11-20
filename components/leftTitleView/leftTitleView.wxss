@@ -1,0 +1,14 @@
+.leftTitleView{
+    width: 250rpx;
+    height: 72rpx;
+    font-size: 32rpx;
+    color: #FFFFFF;
+    position: relative;
+}
+.leftTitleView text{
+    position: absolute;
+    left:113rpx;
+    /* top:20rpx;  */
+    line-height: 72rpx;
+}
+.leftTitleView>image:nth-of-type(1){width: 75rpx;height: 60rpx;position: absolute;left: -13rpx;}

@@ -1,0 +1,39 @@
+.cell {
+  width: 100%;
+  font-size: 36rpx;
+  line-height: 80rpx;
+  font-weight: bold;
+}
+
+.cellLeft {
+  display: inline-block;
+  color: #000;
+  padding-left: 56rpx;
+}
+
+.cellLeft view {
+  width: 300rpx;
+  background: #575757;
+  border-radius: 40rpx;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cellRight {
+  display: inline-block;
+  padding-left: 40rpx;
+  z-index: 9999;
+}
+
+.cellRight view {
+  width: 300rpx;
+  background: #ffe852;
+  border-radius: 40rpx;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.letBtnGenerate{background-color: #FFFFFF;font-weight: bold;font-size: 36rpx;}

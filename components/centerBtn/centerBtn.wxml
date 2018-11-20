@@ -1,0 +1,3 @@
+    <view class="center_View">
+        <view class="center_Btn text {{btnConfig}}" style="width:{{widths===300?'':widths+'rpx'}}"  bindtap="center_Btn" > {{centerBtnText}} </view>
+    </view>
