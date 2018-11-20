@@ -1,0 +1,11 @@
+<view class="detailsGiftsView">
+  <image bindtap="previewImage" data-index="{{index}}" wx:for="{{image_array}}" wx:key="item" src="{{item}}" mode="widthFix" />
+
+  <view class="share-btn">
+    <view class="bottom-btn">
+      <view>
+        <returnHomeBtn bindclickBtn="returnIndex"></returnHomeBtn>
+      </view>
+    </view>
+  </view>
+</view>

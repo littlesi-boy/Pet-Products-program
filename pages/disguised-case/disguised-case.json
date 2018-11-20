@@ -1,0 +1,11 @@
+{
+  "navigationBarBackgroundColor": "#FFDD00",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "狗星写真集",
+  "backgroundTextStyle": "dark",
+  "backgroundColor": "#f4f4f4",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "returnHomeBtn": "../../components/returnHomeBtn/returnHomeBtn"
+  }
+}

@@ -1,0 +1,50 @@
+@import '../../components/leftTitleView/leftTitleView.wxss';
+@import '../../style/style.wxss';
+@import '../../style/drawer_screen.wxss';
+@import "../../components/loading/loading.wxss";
+@import '../../style/share-btn.wxss';
+
+.color_8E8E8E{color: #8E8E8E;}
+.color_4D4D4D{color: #4D4D4D;height: 100%;padding-top: 15rpx;font-weight: bold;}
+.topBoxs{height: 97rpx;padding-top: 30rpx;padding-left: 40rpx;padding-bottom: 24rpx}
+.topBox{overflow-x: auto;border-bottom: solid 20rpx #f3f3f4;-webkit-overflow-scrolling: touch}
+.dogView{width: 557rpx;display: inline-block;}
+.dogView>view:nth-of-type(1){height: 280rpx;overflow: hidden;}
+.dogView>view:nth-of-type(1)>view{width: 546rpx;height: 390rpx;display: block;margin: 0 auto;background-size: 100% 100%;
+    background-repeat: no-repeat;}
+
+.dogViewbottom{text-align: center;margin: 20rpx auto;border-top: solid 3rpx rgba(32, 32, 32, 0.5);position: relative;padding-top: 12rpx;font-size: 30rpx;font-weight: bold;}
+.dogViewbottom view{position: absolute;top: -1rpx;left: 176rpx; height: 4rpx;width: 198rpx;background: #FFDD00}
+
+
+
+
+
+.cellItem{border-bottom: solid 4rpx #f3f3f4;margin-bottom: 30rpx;overflow: hidden;}
+.cellItemTop{display: flex;}
+.cellItemTop>view:nth-of-type(1){width: 16%;display: inline-block;padding-left: 30rpx;}
+.cellItemTop>view:nth-of-type(2){width: 70%;display: inline-block;
+
+height: 100rpx;
+padding-top: 16rpx;
+}
+.cellItemTop>view:nth-of-type(2)>view:nth-of-type(1){
+font-weight: 700;
+}
+
+.cellItemHeadImage{width: 80rpx;height: 80rpx;border: solid 6rpx #FFDD00;border-radius: 50%;}
+
+
+.cellItembpttomImage{width: 643rpx;display: block;height: 520rpx}
+.alert{position: relative;width:50%;display: inline-block;height: 80rpx;}
+.alert>image{width: 200rpx;height: 40rpx;position: absolute;left:99rpx;top:25rpx;}
+.drawer_title{position: relative;}
+  
+.drawer_titleView{height:55rpx; width:55rpx; display:block; position: absolute;right:4rpx; top:20rpx;} 
+
+.drawer_titleView:before, .drawer_titleView:after{content:''; height:8rpx; width:40rpx; display:block; background:#333; border-radius:10px;position:absolute; top:16rpx; left:0px; transform:rotate(-45deg);}
+
+.drawer_titleView:after{transform:rotate(45deg);}
+
+
+.cellItemBottom>view:nth-of-type(2){height: 400rpx;overflow: hidden;padding-top: 16rpx;}

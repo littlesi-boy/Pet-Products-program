@@ -1,0 +1,7 @@
+{
+    "navigationBarBackgroundColor": "#FFDD00",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "兑换详情",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh":true
+  }

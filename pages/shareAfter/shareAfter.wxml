@@ -1,0 +1,100 @@
+<import src="../../components/loading/loading.wxml" />
+
+<view class="shareAfter-Box">
+  <view class="cellItem">
+    <view class="cellItemTop">
+      <view>
+        <image mode="aspectFit" class="cellItemHeadImage" src="{{posterByData.master.head_image}}" />
+      </view>
+      <view>
+        <view class="font_size28">
+          {{posterByData.master.nick_name}}
+        </view>
+        <view class="font_size24 color_8E8E8E">
+          {{posterByData.date_time}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="shareDog-shareFont">
+    <view>
+      <view class="font_size24">
+        {{posterByData.word}}
+      </view>
+    </view>
+  </view>
+  <view class="shareDog-MyDogImage">
+    <view class="font_size24">
+      <text class="font-weightBold">{{posterByData.dog_type.type_name}}</text>
+      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;{{posterByData.dog_type.brief_introduction}}</text>
+    </view>
+    <image src="{{posterByData.image_url}}" />
+  </view>
+  <view class="shareAfterbootm">
+    <view>
+      <image mode="aspectFit" src="../../image/exchange/Bone@3x.png" />
+      <view class="demoSpan1"></view>
+      <text class="font_40rpx">{{shareDogBoneData.dog_bone_total}}</text>
+      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;{{posterByData.master.nick_name}}的狗骨头</text>
+    </view>
+    <text wx:if="{{shareDogBoneData.dog_bone}}">
+        {{shareDogBoneData.dog_bone/2}}%
+    </text>
+    <view>
+      <view>
+        <view class="occupy" style="width:{{shareDogBoneData.occupy}}" wx:if="{{isType == 1}}">
+
+        </view>
+        <view class="not_occupy" style="width:{{shareDogBoneData.not_occupy}}" wx:if="{{isType == 1}}">
+
+        </view>
+
+        <view class="shareDogBoneDataOccupy" wx:if="{{isType == 2}}">
+
+        </view>
+        <view class="shareDogBoneDataNot_occupy" wx:if="{{isType == 3}}">
+
+        </view>
+      </view>
+    </view>
+    <view>
+      <center-btn widths="630" btnConfig="set_AddScatter" centerBtnText="撒骨头" bindconfirmpay="set_AddScatter"></center-btn>
+      <button open-type="getUserInfo" bindgetuserinfo="set_AddScatter"></button>
+    </view>
+  </view>
+
+  <view class="shareAfterbootms">
+    {{posterByData.master.nick_name}}的后勤部队
+  </view>
+  <view class="listItemDiv">
+    <block wx:for="{{listArray}}" wx:key="listArrays" wx:for-index="index">
+      <view class="listItem" bindtap='backShareAfter' data-id='{{item.poster_id}}' data-openid='{{item.open_id}}'>
+        <view style="{{index < 3 ? 'font-weight: bold':''}}">
+          <text>{{item.rank}}</text>
+        </view>
+        <view>
+          <image mode="aspectFit" src="{{item.scatter_url}}" wx:if="{{index <= 2}}" />
+          <image mode="aspectFit" style="border:solid 6rpx #ffffff;" src="{{item.scatter_url}}" wx:if="{{index > 2}}" />
+          <view>
+            <text>{{item.scatter_name}}</text>
+          </view>
+        </view>
+        <view>
+          <view>
+            <view>
+              <text decode="{{true}}" space="{{true}}">{{item.scatter_num}}根</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class="page-end" wx:if="{{pageEnd}}">没有更多数据了!</view>
+    <template wx:if="{{pageLoading}}" is="pageLoading" />
+    <view class="page-error" wx:if="{{pageError}}">网络超时!</view>
+  </view>
+  <view class="share-btn">
+    <button open-type="getUserInfo" bindgetuserinfo="bindrightBtn">1111</button>
+    <leftRightBtn widths="570" paddingLeft="40rpx" paddingRight="70rpx" leftBtnFontColor="#FFE852" leftBtnBg="#9f9f9f" rightBtnFontColor="#202020" leftBtnFont="查看首页" rightBtnFont="我也要一只" btnConfig="{{center_Views}}" bindleftBtn="bindleftBtn"></leftRightBtn>
+  </view>
+
+</view>

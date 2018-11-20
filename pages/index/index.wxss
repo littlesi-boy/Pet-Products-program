@@ -1,0 +1,214 @@
+@import '../../style/listItem.wxss';
+@import '../../style/item.wxss';
+@import '../../style/style.wxss';
+@import '../../components/leftTitleView/leftTitleView.wxss';
+
+.z_index{z-index: 1000;}
+
+
+.swiperView{
+  height: 628rpx;
+  background: #ffdd00;
+  position: relative;
+}
+.swiperTiele{position: absolute;top: 42rpx;left: 44rpx;}
+
+.cellLeft{font-weight: bold;}
+.cellRight{font-weight: normal;}
+.share{position: absolute;right: 25rpx;top: 30rpx;z-index: 1000;}
+.share image{width: 146rpx;height: 106rpx;}
+.swiperCustomerService{position: fixed;bottom: 30%;right: 0;z-index: 1000;}
+.swiperCustomerService image{width: 100rpx;height: 100rpx;}
+.swiperCustomerService button{width: 130rpx;height: 130rpx;opacity: 0; position: absolute;bottom: 0;right: 0;}
+
+.swiperRight{position: absolute;top: 274rpx;right: 0rpx;width: 55rpx;}
+
+.rightBtn{height:70rpx; width:44rpx; display:block; position:relative;} 
+.rightBtn{overflow:hidden; width:32rpx;}
+.rightBtn:before{content:''; height:44rpx; width:40rpx; display:block; border:8.2rpx solid #333; border-left-width:0; border-top-width:0; transform:rotate(-45deg);  position:absolute; top:10rpx; right:10rpx;}
+
+.swiperLeft{position: absolute;top: 280rpx;left: 20rpx;width: 65rpx;}
+
+.leftBtn{height:70rpx; widows: 44rpx; display:block; position:relative;} 
+.leftBtn{overflow:hidden; width:32rpx;}
+.leftBtn:before{content:''; height:44rpx; width:40rpx; display:block; border:8.2rpx solid #333; border-right-width:0; border-bottom-width:0; transform:rotate(-45deg); position:absolute; top:10rpx; left:10rpx;}
+
+
+.swiperBottom{position: absolute;bottom: 23rpx;left: 150rpx;}
+.swiperBottom view{display: inline-block;}
+.swiperBottom>view:nth-child(1){font-size: 24rpx;font-weight: bold;}
+.swiperBottom>view:nth-child(3){padding-top: 30rpx}
+.swiperBottom image{width: 30rpx;height: 30rpx}
+
+.addDog{position: absolute;top: 75rpx;left: 113rpx;z-index: 890;}
+.addDog>image{width: 520rpx;height: 520rpx;}
+.swiperSwitchView{
+  position: absolute;
+  width: 750rpx;height: 628rpx;
+  z-index: 40;
+}
+
+
+
+.index-propaganda {
+  height: 220rpx;
+  background: #f2f0f1;
+}
+
+.index-propaganda image {
+  height: 220rpx;
+  width: 100%;
+}
+
+
+
+
+
+.index-imageSize{width: 56rpx;height: 56rpx;}
+.arrow_Right{display: inline-block; width: 7px; height: 7px; border-top: 2px solid #CDCDD2;  border-right: 2px solid #CDCDD2; transform: rotate(45deg);}
+
+
+.index-infoBox{height: 180rpx;padding-top: 25rpx;}
+
+.index-infoBox>view:nth-of-type(2) image{width: 120rpx;height: 88rpx;float: right;}
+
+.index-infoBox>view:nth-of-type(1){width: 50%;height: 88rpx;display: inline-block;padding-left: 45rpx;}
+.index-infoBox>view:nth-of-type(2){width: 40%;height: 88rpx;display: inline-block;}
+.index-infoBox>view:nth-of-type(2)>view{padding-top: 30rpx;}
+
+.index-infoBox>view:nth-of-type(3){padding-top: 20rpx;}
+
+.index-infoBox>view:nth-of-type(3) text{text-align: left;display: block;}
+
+
+.getShowInfo{
+  position:absolute;
+  width:340rpx;
+  height:340rpx;
+  top:75rpx;
+  z-index:900;
+  left:113rpx;
+  opacity:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.drawer_screen {  
+  width: 100%;  
+  height: 100%;  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  z-index: 1000;  
+  background: #000;  
+  opacity: 0.5;  
+  overflow: hidden;  
+}  
+  
+.drawer_box {  
+  width: 520rpx;  
+  position: fixed;  
+  top: 11%;  
+  left: 16.5%; 
+  z-index: 1001;  
+  background: #FFDD00;  
+  border-radius: 16rpx; 
+  padding-bottom: 44rpx; 
+}  
+  
+.drawer_title{  
+  padding: 0 30rpx 30rpx 30rpx;  
+  position: relative;
+  height: 60rpx;
+}  
+.drawer_title>view:nth-of-type(1){position: absolute;left: -5rpx;}
+.drawer_content {
+  padding: 0 40rpx;  
+  height: 100%;  
+}  
+.drawer_title>view:nth-of-type(2){position: absolute;right:25rpx;
+  top:20rpx;
+  }
+
+.drawer_title>view:nth-of-type(2){height:40rpx; width:40rpx; display:block; } 
+
+.drawer_title>view:nth-of-type(2):before, .drawer_title>view:nth-of-type(2):after{content:''; height:8rpx; width:40rpx; display:block; background:#333; border-radius:10px;position:absolute; top:16rpx; left:0px; transform:rotate(-45deg);}
+
+.drawer_title>view:nth-of-type(2):after{transform:rotate(45deg);}
+
+  
+
+
+
+/* 定位配置 */
+
+.dog_configZ_index{z-index: 888;}
+.dog_img{width: 750rpx;height: 628rpx; position: absolute;z-index: 290;}
+.dog_clothes{position: absolute;width:  750rpx;height: 628rpx; }
+.dog_food_blow{position: absolute;width:  750rpx;height: 628rpx;}
+.dog_toy{position: absolute;width:  750rpx;height: 628rpx;}
+.dog_food{position: absolute;width:  750rpx;height: 628rpx;z-index: 200;}
+.dog_image_url{position: absolute;width:  750rpx;height: 628rpx;}
+.dog_necklace{position: absolute;width:  750rpx;height: 628rpx;}
+.dog_straw_mattress{position: absolute;width:  750rpx;height: 628rpx;}
+.dog_snacks{position: absolute;width:  750rpx;height: 628rpx;}
+
+
+
+
+
+
+ @keyframes swing {
+0%{
+  transform:rotate(10deg)
+}
+10% {
+	transform:rotate(6deg)
+}
+20% {
+	transform:rotate(0deg)
+}
+40% {
+	transform:rotate(-5deg)
+}
+40% {
+	transform:rotate(-10deg)
+}
+50% {
+	transform:rotate(-15deg)
+}
+60% {
+	transform:rotate(-10deg)
+}
+70% {
+	transform:rotate(-5deg)
+}
+80% {
+	transform:rotate(0deg)
+}
+90% {
+	transform:rotate(6deg)
+}
+100%{
+  transform:rotate(10deg)
+}
+
+}
+.share {
+  transform-origin: center;
+  animation-fill-mode:both;
+	animation:swing 1.2s infinite;
+}
+
+   

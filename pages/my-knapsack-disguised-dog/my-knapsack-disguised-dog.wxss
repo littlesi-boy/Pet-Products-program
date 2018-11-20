@@ -1,0 +1,24 @@
+@import '../disguised-dog/disguised-dog.wxss';
+
+
+@import '../../style/share-btn.wxss';
+
+.disguisedDoginfo{margin: 0 auto;}
+
+
+.disguisedDogImage{height:650rpx;}
+
+
+.swiperLeft{position: absolute;top: 280rpx;left: 20rpx;width: 65rpx;}
+.swiperRight{position: absolute;top: 274rpx;right: 0rpx;width: 55rpx;}
+
+
+.rightBtn{height:70rpx; width:44rpx; display:block; position:relative;} 
+.rightBtn{overflow:hidden; width:32rpx;}
+.rightBtn:before{content:''; height:44rpx; width:40rpx; display:block; border:8.2rpx solid #333; border-left-width:0; border-top-width:0; transform:rotate(-45deg);  position:absolute; top:10rpx; right:10rpx;}
+
+
+.leftBtn{height:70rpx; widows: 44rpx; display:block; position:relative;} 
+.leftBtn{overflow:hidden; width:32rpx;}
+.leftBtn:before{content:''; height:44rpx; width:40rpx; display:block; border:8.2rpx solid #333; border-right-width:0; border-bottom-width:0; transform:rotate(-45deg); position:absolute; top:10rpx; left:10rpx;}
+.z_index{z-index: 1000;}

@@ -1,0 +1,11 @@
+{
+  "navigationBarBackgroundColor": "#FFDD00",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "装扮狗狗",
+  "backgroundTextStyle": "light",
+  "usingComponents": {
+    "leftRightBtn": "../../components/leftRightBtn/leftRightBtn",
+    "backgroundLayer":"../../components/backgroundLayer/backgroundLayer"
+  },
+  "disableScroll": true
+}

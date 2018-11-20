@@ -1,0 +1,61 @@
+
+<wxs src="../../utils/date.wxs" module="util" />
+<view class="awardingRecords-view">
+   <view class="cell padding_40rpx" style="border:none;height:109rpx" bindtap="receivingAddress">
+      <view class="cellLeft">
+        <view style='padding-top:0;'>
+          <image mode="aspectFit" class="awardingRecords-imageSize" src="https://www.yanggouleme.com/static/other_image/address.png" />
+        </view>
+        <text class="font_size32" decode="{{true}}" space="{{true}}">&nbsp;我的收货地址</text>
+      </view>
+      <view class="cellRight text_AlignRight">
+        <view class="cellRightArrow">
+          
+        </view>
+      </view>
+    </view>
+    <view class="Line"></view>
+    <view class="cell padding_40rpx" style="border:none;height:109rpx">
+      <view class="cellLeft">
+        <view style='padding-top:0;'>
+          <image mode="aspectFit" class="awardingRecords-imageSize" src="../../image/exchange/Bone@3x.png" />
+        </view>
+        <text class="font_size32" decode="{{true}}" space="{{true}}">&nbsp;我的狗骨头</text>
+      </view>
+      <view class="cellRight text_AlignRight">
+        <text class="font_size32 text_AlignRight" decode="{{true}}" space="{{true}}">{{dog_bone_num}}</text>
+      </view>
+    </view>
+    <view class="awardingRecords-infoTitle">
+      注：狗骨头可通过卖狗狗装扮和分享给好友撒骨头获得 。
+    </view>
+    <view class="awardingRecords-listItems">
+      <view>
+        已兑换商品
+      </view>
+      <view class="awardingRecords-items" wx:for="{{prizeList}}" wx:key="lists" data-id="{{item.id}}" bindtap="awardingdetails">
+        <view>
+          <image mode="aspectFit" src="{{item.lucky_activity.prize.image_url}}" />
+        </view>
+        <view>
+          <view>
+            <view>
+              <text class="font_size28 color_#202020 fontWeight">{{item.lucky_activity.prize.name}}</text>
+            </view>
+            <view>
+              <text class="font_size24 color_575757">{{item.lucky_activity.prize.dog_bone_num}}根骨头</text>
+            </view>
+            <view>
+              <text class="font_size20 color_575757"> {{util.handleDate(item.created_time)}}</text>
+            </view>
+          </view>
+          <view class="awardingRecords-status">
+            <view class="font_size24">
+              <image mode="aspectFit" src="../../image/ok.png" />
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="emptyData" wx:if="{{emptyData}}">没有更多数据了</view>
+</view>

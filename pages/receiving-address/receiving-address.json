@@ -1,0 +1,10 @@
+{
+  "navigationBarBackgroundColor": "#FFDD00",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "设置收货地址",
+  "backgroundTextStyle": "light",
+  "disableScroll": true  ,
+  "usingComponents": {
+    "center-btn": "../../components/centerBtn/centerBtn"
+  }
+}

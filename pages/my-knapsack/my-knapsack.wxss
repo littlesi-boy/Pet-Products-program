@@ -1,0 +1,79 @@
+@import "../../components/navbar/navbar.wxss";
+@import "../../components/loading/loading.wxss";
+@import '../../style/share-btn.wxss';
+
+
+
+.item_list{display: flex;display: -webkit-flex;flex-wrap:wrap; padding: 30rpx;}
+.items{width: 30%;height: 264rpx;margin-bottom: 5%;border-radius: 16rpx;position: relative;background-image: url(https://www.yanggouleme.com/static/other_image/getprize.png);background-size: cover;}
+.items:nth-of-type(3n-1){margin: 0 5%;}
+
+
+.items>image:nth-of-type(1){width: 100rpx;height: 100rpx;position: absolute;left:60rpx;top:80rpx;}
+.items>view:nth-of-type(1){position: absolute;bottom: 25rpx;width: 100%;}
+.items>view:nth-of-type(1)>view:nth-of-type(1){ width: 100%; display: flex;
+  display: -webkit-flex;
+  font-size: 22rpx;align-items: center;justify-content: center;}
+.items>view:nth-of-type(1)>view:nth-of-type(1) image{width: 18rpx;height: 18rpx;margin-right: 10rpx;}
+
+
+
+
+.content_top_view{display: flex;display: -webkit-flex;}
+.content_top_view>view:nth-of-type(1){display: flex;display: -webkit-flex; justify-content: flex-start;min-width: 80%;flex: 1;flex-direction: column;}
+.content_top_view>view:nth-of-type(1)>view:nth-of-type(1){font-weight: bold;font-size: 28rpx;} 
+.content_top_view>view:nth-of-type(1)>view:nth-of-type(2){font-size: 24rpx;color:#ADADAD;} 
+
+.content_top_view>view:nth-of-type(2){justify-content: flex-end;min-width: 20%;flex: 1;}
+.content_top_view>view:nth-of-type(2)>view{position: relative;}
+
+
+.cancel{height:40rpx; width:40rpx; display:block;position: absolute;right: 0; } 
+.cancel:before, .cancel:after{content:''; height:8rpx; width:40rpx; display:block; background:#333; border-radius:10px;position:absolute; top:16rpx; left:0px; transform:rotate(-45deg);}
+.cancel:after{transform:rotate(45deg);}
+
+
+.content_middle_view{display: flex;display: -webkit-flex;flex-wrap: wrap;padding-top: 40rpx;margin-bottom: 70rpx;}
+.content_middle_items{height: 60rpx;font-size: 32rpx;text-align: center;line-height: 60rpx;min-width: 20%;max-width: 20%;border-radius: 80rpx;margin: 25rpx 2.1%;flex: 1;}
+.content_middle_items_isSelectTrue{background: #FFDD00;color: #202020;border: solid 2rpx #FFDD00;}
+.content_middle_items_isSelectFalse{color: #707070;border: solid 2rpx #ADADAD;}
+
+
+.content_dress_number{display: flex;display: -webkit-flex;font-size: 24rpx;color: #707070;margin-bottom: 50rpx;}
+.content_dress_number image{width: 20rpx;height: 20rpx;margin-left: 10rpx;}
+.content_dress_number>view:nth-of-type(1){min-width: 40%;justify-content: flex-start;}
+.content_dress_number>view:nth-of-type(1)>text:nth-of-type(1){font-weight: bold;color: #202020;}
+.content_dress_number>view:nth-of-type(2){min-width: 60%;justify-content:flex-end;text-align: right;}
+.content_dress_number>view:nth-of-type(2)>text:nth-of-type(2){font-weight: bold;color: #202020;margin: 0 7rpx;}
+
+
+
+  /*mask*/
+  .drawer_screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #000;
+    opacity: 0.7;
+    overflow: hidden;
+  }
+  /*content*/
+  .drawer_attr_box {
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    background: #fff;
+  }
+  .drawer_content {
+    padding: 40rpx 30rpx;
+    height: 550rpx;
+    overflow-y: scroll;
+  }
+
+  

@@ -1,0 +1,196 @@
+<import src="../../components/leftTitleView/leftTitleView.wxml" />
+<view class="index-view">
+  <view class="index-propaganda" data-getactivitylateid="{{activityLate.id}}" bindtap="exchangeClick">
+    <image src="{{activityLate.big_cover}}" />
+  </view>
+
+  <view class="swiperView">
+    <!-- 狗 -->
+    <image mode="aspectFit" class="dog_img dog_configZ_index" src="{{singleDog[swiperViewIndex].dog_type.dog_img}}" bindtap="myDog" data-dogindex="{{swiperViewIndex}}" />
+    <!-- 狗衣服 -->
+    <image mode="aspectFit" class="dog_clothes dog_configZ_index" src="{{singleDog[swiperViewIndex].clothes.image_url}}" bindtap="myDog" data-dogindex="{{swiperViewIndex}}" />
+    <!-- 狗粮 -->
+    <image mode="aspectFit" class="dog_food " src="{{singleDog[swiperViewIndex].food.image_url}}" />
+    <!-- 狗盆 -->
+    <image mode="aspectFit" class="dog_food_blow dog_configZ_index" src="{{singleDog[swiperViewIndex].food_blow.image_url}}" bindtap="myDog" data-dogindex="{{swiperViewIndex}}" />
+    <!-- 玩具 -->
+    <image mode="aspectFit" class="dog_toy dog_configZ_index" src="{{singleDog[swiperViewIndex].toys.image_url}}" />
+    <!-- 狗项链 -->
+    <image mode="aspectFit" class="dog_necklace dog_configZ_index" src="{{singleDog[swiperViewIndex].necklace.image_url}}" bindtap="myDog" data-dogindex="{{swiperViewIndex}}" />
+
+    <view class="" wx:if="{{singleDog[swiperViewIndex].state === 1}}">
+      <!-- 狗垫子 -->
+      <image mode="aspectFit" style="z-index: 280;" class="dog_straw_mattress " src="{{singleDog[swiperViewIndex].straw_mattress.image_url}}" bindtap="myDog" data-dogindex="{{swiperViewIndex}}" />
+
+    </view>
+
+    <view wx:if="{{singleDog[swiperViewIndex].state === 2}}">
+      <!-- 狗垫子 -->
+      <image mode="aspectFit" style="z-index: 280;" class="dog_straw_mattress " src="{{singleDog[swiperViewIndex].straw_mattress.after.image_url}}" bindtap="myDog" data-dogindex="{{swiperViewIndex}}" />
+
+      <image mode="aspectFit" style="z-index: 300;" class="dog_straw_mattress " src="{{singleDog[swiperViewIndex].straw_mattress.before.image_url}}" bindtap="myDog" data-dogindex="{{swiperViewIndex}}" />
+
+    </view>
+
+    <!-- 零食 -->
+    <image mode="aspectFit" class="dog_snacks dog_configZ_index" src="{{singleDog[swiperViewIndex].snacks.image_url}}" bindtap="myDog" data-dogindex="{{swiperViewIndex}}" />
+
+
+
+    <view class="swiperTiele">
+      <template is="leftTitleView" data="{{titleInfo: '我的狗狗',widths:'260rpx',left:'75rpx',fontSize:'40rpx',top:'10rpx'}}" />
+    </view>
+    <view class="share z_index" wx:if="{{swiperViewIndex != singleDog.length}}" bindtap="share" data-dogtypeid="{{singleDog[swiperViewIndex].dog_type.id}}" data-dogid="{{singleDog[swiperViewIndex].id}}">
+      <image mode="aspectFit" src="../../image/fenxiang@3x.png" />
+    </view>
+    <view class="swiperLeft z_index" wx:if="{{singleDog != ''}}" bindtap="swiperLeft">
+      <view class="leftBtn">
+
+      </view>
+    </view>
+    <view class="swiperRight z_index" wx:if="{{singleDog != ''}}" bindtap="swiperRight">
+      <view class="rightBtn">
+
+      </view>
+    </view>
+
+    <view class="addDog" wx:if="{{swiperViewIndex === singleDog.length}}" bindtap="addDog" data-bonenum="{{rankData.dog_bone_num}}">
+      <image mode="aspectFit" src="../../image/addDog@3x.png" />
+    </view>
+    <view class="swiperBottom" wx:if="{{swiperViewIndex === singleDog.length}}">
+      <view></view>
+      <view>
+        <text decode="{{true}}" class="font_size24" space="{{true}}"> 
+          &nbsp;&nbsp;添加属于你的狗狗，开启幸福生活吧！&nbsp;&nbsp;
+        </text>
+      </view>
+      <view></view>
+    </view>
+
+    <button wx:if="{{swiperViewIndex === singleDog.length}}" class="getShowInfo" type="primary" open-type="getUserInfo" bindgetuserinfo="userInfoHandler"> 确认授权 </button>
+
+
+    <image class="swiperSwitchView" mode="aspectFit" src="https://www.yanggouleme.com/static/pet_dog/scene/background.png" />
+
+    <view class="swiperBottom" wx:if="{{swiperViewIndex != singleDog.length}}">
+      <view>
+        <text class="color_#202020 font_size24">{{singleDog[swiperViewIndex].dog_type.type_name}}</text>
+      </view>
+      <view>
+        <text decode="{{true}}" class="font_size24" space="{{true}}"> 
+          &nbsp;&nbsp;点击狗狗抽取它的稀有装扮吧&nbsp;&nbsp;
+        </text>
+      </view>
+      <view>
+        <image mode="aspectFit" src="../../image/Group924@3x.png" />
+      </view>
+    </view>
+
+  </view>
+  <view class="swiperCustomerService z_index">
+    <image mode="aspectFit" src="../../image/swiperCustomerService.png" />
+    <button open-type="contact">111</button>
+  </view>
+
+
+  <view class="cell padding_40rpx" bindtap="myKnapsack" style='border-bottom:0;'>
+    <view class="cellLeft">
+      <view>
+        <image mode="aspectFit" class="index-imageSize" src="../../image/knapsack@3x.png" />
+      </view>
+      <text class="font_size32">我的背包</text>
+    </view>
+    <view class="cellRight text_AlignRight">
+      <view class="arrow_Right"></view>
+    </view>
+  </view>
+
+  <view class="cell padding_40rpx" bindtap="dynamic">
+    <view class="cellLeft">
+      <view>
+        <image mode="aspectFit" class="index-imageSize" src="../../image/xiezhenji@3x.png" />
+      </view>
+      <text class="font_size32">狗星写真集</text>
+    </view>
+    <view class="cellRight text_AlignRight">
+      <text class="font_size24 text_AlignRight" decode="{{true}}" space="{{true}}">{{posterNotSee}}条新动态&nbsp;&nbsp;</text>
+      <view class="arrow_Right"></view>
+    </view>
+  </view>
+
+  <view class="index-infoBox">
+    <view>
+      <view>
+        <template is="leftTitleView" data="{{titleInfo: '幸福值世界排名',widths:'380rpx',left:'75rpx',fontSize:'40rpx',top:'10rpx'}}" />
+      </view>
+    </view>
+    <view>
+      <view class="reward" bindtap="reward" data-statu="open">
+        <image mode="aspectFit" src="../../image/reward.png" />
+      </view>
+    </view>
+    <view class="padding_40rpx font_size24">
+      <text decode="{{true}}" space="{{true}}">截止时间： &nbsp;&nbsp;{{rankData.rank_end_time}}</text>
+    </view>
+  </view>
+  <view>
+    <view class="listItem" style="background:#FFDD00" wx:if="{{rankData.nick_name != null && rankData.head_image != null}}">
+      <view>
+        {{rankData.rank_num}}
+      </view>
+      <view>
+        <image src="{{rankData.head_image}}" />
+        <view>
+          <text>{{rankData.nick_name}}</text>
+        </view>
+      </view>
+      <view>
+        <view style="background:#ADADAD;">
+          <view>
+            <image mode="aspectFit" src="../../image/star@3x.png" />
+            <text decode="{{true}}" space="{{true}}">&nbsp;{{rankData.happiness_num}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="listItem" wx:for="{{allDog}}" wx:key="allDogs" wx:for-index="index">
+        <view style="{{index < 3 ? 'font-weight: bold':''}}">
+          <text>{{index+1}}</text>
+        </view>
+        <view>
+          <image mode="aspectFit" src="{{item.head_image}}" wx:if="{{index <= 2}}" />
+          <image mode="aspectFit" style="border:solid 6rpx #ffffff;" src="{{item.head_image}}" wx:if="{{index > 2}}" />
+          <view>
+            <text>{{item.nick_name}}</text>
+          </view>
+        </view>
+        <view>
+          <view>
+            <view>
+              <image mode="aspectFit" src="../../image/addDog/xingxinghei@3x.png" />
+              <text decode="{{true}}" space="{{true}}">&nbsp;{{item.happiness_num}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+  <view class="drawer_screen" bindtap="reward" data-statu="close" wx:if="{{showModalStatus}}"></view>
+  <view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+    <view class="drawer_title">
+      <template is="leftTitleView" data="{{titleInfo: '奖励规则',widths:'266rpx',left:'75rpx',fontSize:'40rpx',top:'10rpx'}}" />
+      <view bindtap="reward" data-statu="close">
+
+      </view>
+    </view>
+    <view class="drawer_content">
+      <view class="font_size24">
+        <text>{{rankData.explain}}</text>
+      </view>
+    </view>
+  </view>
+</view>

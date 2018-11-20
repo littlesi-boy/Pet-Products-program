@@ -1,0 +1,10 @@
+{
+    "navigationBarBackgroundColor": "#FFDD00",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "添加狗狗",
+    "backgroundTextStyle": "light",
+    "usingComponents": {
+      "center-btn": "../../components/centerBtn/centerBtn",
+      "returnHomeBtn": "../../components/returnHomeBtn/returnHomeBtn"
+    }
+  }

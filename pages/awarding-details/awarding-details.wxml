@@ -1,0 +1,56 @@
+
+          
+<wxs src="../../utils/date.wxs" module="util" />
+<view>
+  <view class="awardingRecords-listItems">
+    <view class="awardingRecords-items">
+      <view>
+        <image mode="aspectFit" src="{{awardingDetails.lucky_activity.prize.image_url}}" />
+      </view>
+      <view>
+        <view>
+          <view>
+            <text class="font_size28 color_#202020 fontWeight">{{created_time}}</text>
+          </view>
+          <view>
+            <text class="font_size24 color_575757">{{awardingDetails.lucky_activity.prize.name}}</text>
+          </view>
+          <view>
+            <text class="font_size20 color_575757"> 兑换需{{awardingDetails.lucky_activity.prize.dog_bone_num}}根骨头</text>
+          </view>
+        </view>
+        <view class="awardingRecords-status">
+          <view class="font_size24">
+            <image mode="aspectFit" src="../../image/ok.png" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="position">
+      <view class="positionTitle">
+          <image mode="aspectFit" src="https://www.yanggouleme.com/static/other_image/address.png" />
+          <text decode="{{true}}" space="{{true}}">&nbsp;   收货信息</text>
+      </view>
+      <view class="positionInfo">
+        <view class="positionInfoMt" wx:if="{{awardingDetails.receiver_name != null}}">
+            收货人：{{awardingDetails.receiver_name}}
+        </view>
+        <view class="positionInfoMt" wx:if="{{awardingDetails.receiver_name == null}}">
+            收货人：暂无数据
+        </view>
+        <view class="positionInfoMt" wx:if="{{awardingDetails.receiver_phone != null}}">
+          <text decode="{{true}}" space="{{true}}">电&nbsp; 话 ：{{awardingDetails.receiver_phone}}</text>
+        </view>
+        <view class="positionInfoMt" wx:if="{{awardingDetails.receiver_phone == null}}">
+          <text decode="{{true}}" space="{{true}}">电&nbsp; 话 ：暂无数据</text>
+        </view>
+        <view class="positionInfoMt" style="color:#8E8E8E;" wx:if="{{awardingDetails.receiver_phone != null}}">
+            收货地址：{{awardingDetails.receiver_city}}{{awardingDetails.receiver_address}}
+        </view>
+        <view class="positionInfoMt" style="color:#8E8E8E;" wx:if="{{awardingDetails.receiver_phone == null}}">
+            收货地址：暂无数据
+        </view>
+      </view>
+  </view>
+</view>

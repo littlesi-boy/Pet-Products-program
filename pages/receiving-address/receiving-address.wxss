@@ -1,0 +1,21 @@
+@import '../../style/style.wxss';
+
+.receivingAddressView{padding-top: 15rpx;}
+.itemView {
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 76rpx;
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  border-bottom: solid 2rpx rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+.input {
+  width: 500rpx;
+  height: 50rpx;
+  margin-left: 30rpx;
+  font-weight: normal;
+}
+.itemViews{margin: 40rpx auto;}

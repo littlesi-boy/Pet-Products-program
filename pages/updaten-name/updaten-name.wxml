@@ -1,0 +1,20 @@
+<view class="receivingAddressView">
+  <view class="itemView font_size24">名称
+    <input style="margin-left: 52rpx;" maxlength="5" type="text" value="{{dogName}}" class="input" name="dogName" placeholder="请输入名称" bindblur="dogNameInput" />
+  </view>
+  <view>
+    <view>
+      <view class="textarea">
+        <textarea value='{{textareaValue}}' bindinput="bindinput" maxlength="15" placeholder="请输入信息" bindblur="textareaInput" />
+      </view>
+      <view class="text-number">
+        <text>{{textareaValue.length || 0}}/15</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="share-btn">
+    <center-btn btnConfig="set_AddScatter" widths="500" centerBtnText="确定修改" bindconfirmpay="confirmpay"></center-btn>
+  </view>
+
+</view>

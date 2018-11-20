@@ -1,0 +1,51 @@
+<import src="../../components/leftTitleView/leftTitleView.wxml" />
+
+<view class="sellOutDog">
+  <view class="sellOutDogView">
+    <view class="leftTitleViews">
+      <template is="leftTitleView" data="{{titleInfo: '狗骨头',widths:'190rpx',left:'70rpx',fontSize:'32rpx',top:'15rpx'}}" />
+    </view>
+    <image mode="aspectFit" src="{{compareEquipData.image}}" />
+    <view class="sellOutDogViewBottom">
+      <image src="../../image/exchange/Bone@3x.png" />
+      <text decode="{{true}}" space="{{true}}">&nbsp;{{compareEquipData.D_value}}</text>
+    </view>
+  </view>
+
+
+  <view class="disguisedDoginfo">
+    <view>
+      <template is="leftTitleView" data="{{titleInfo: '我的狗骨头',widths:'255rpx',left:'70rpx',fontSize:'32rpx',top:'15rpx'}}" />
+    </view>
+    <view>
+      <view style='display:flex;margin-top:50rpx;height:48rpx;padding-left:20rpx;line-height:20rpx;'>
+        <view class="disguisedDoginfoLeft">
+          <image mode="aspectFit" class='disguisedDoginfoLeftImage' src="../../image/exchange/Bone@3xs.png" />
+          <text class="font-size36" decode="{{true}}" space="{{true}}">&nbsp;{{compareEquipData.old_bone}}</text>
+        </view>
+        <view style='margin:0 30rpx;color:#8bc34a;line-height:45rpx;'>
+          +
+        </view>
+        <view class="disguisedDoginfoLefts font-size36">
+          <text class="font-size36">{{compareEquipData.D_value}}</text>
+        </view>
+        <view class="disguisedDoginfoLeftArrow">
+          <view class="Arrowleft">
+
+          </view>
+          <view class="Arrowlefts">
+
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="sellOutDog-borderblue">
+      {{compareEquipData.new_bone}}
+    </view>
+  </view>
+
+
+
+  <center-btn btnConfig="center_BtnOkMoreChange" centerBtnText="返回" bindconfirmpay="receivingAddress"></center-btn>
+
+</view>

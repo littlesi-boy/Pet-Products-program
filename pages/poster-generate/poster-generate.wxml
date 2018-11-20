@@ -1,0 +1,20 @@
+<view class="PosterGenerate-view">
+  <view>
+      <image mode="aspectFit" class="images" src="{{images}}" />
+
+  </view>
+  <view class="views">
+    <leftRightBtn widths="550" leftBtnBg="#FFFFFF" leftBtnClass="letBtnGenerate"  rightBtnFontColor="" leftBtnFont="保存到手机" rightBtnFont="发送给好友" btnConfig="{{center_Views}}" centerBtnText="22222" bindleftBtn="bindleftBtn" bindrightBtn="bindrightBtn"></leftRightBtn>
+    <button class="shareType" open-type="share" size="defaultSize">Button</button>
+  </view>
+
+  <view class="font_size24 PosterGenerate-viewBottom">
+    <view>
+      Tips：保存图片发到朋友圈可以让更多的人看到
+    </view>
+    <view>
+      分享之后朋友们每天可以撒
+      <text class="showBone">200根骨头</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,98 @@
+<view class="exchangeView">
+  <view class="exchange-Top-View">
+    <view>
+      <image  src="{{ActivityLate.small_cover}}" />
+    </view>
+    <view class="exchange-Top-btn">
+      <view>
+        <center-btn btnConfig="{{center_Views}}" centerBtnText="{{ActivityState.message}}" bindconfirmpay="confirmpay"></center-btn>
+      </view>
+      <view  wx:if="{{appointmentActivityData.status.code == 0}}">
+        <view>
+          <form name='pushMsgFm' report-submit bindsubmit='getFormID' >
+            <button class="center_BtnOkMoreChange" hover-class="none" size="mini" style="width:100%;border:none;font-weight: bold;background: #FFE852;border:none;font-size:36rpx;height:80rpx;border-radius:40rpx;"  form-type="submit">开始预约</button>
+          </form>
+        </view>
+      </view>
+      <view wx:if="{{appointmentActivityData.status.code == 1}}">
+        <center-btn btnConfig="{{appointmentActivityBg}}" widths="300" centerBtnText="{{appointmentActivityData.result.code}}" bindconfirmpay="appointment"></center-btn>
+      </view>
+      <view wx:if="{{appointmentActivityData.status.code == 2}}">
+        <center-btn btnConfig="{{appointmentActivityBg}}" widths="300" centerBtnText="{{appointmentActivityData.result.code}}" bindconfirmpay="appointment"></center-btn>
+      </view>
+
+      <view>
+        <view class="text_AlignRight">
+          <view>
+            <view class="demoSpan1"></view>
+          </view>
+          <image mode="aspectFit" src="../../image/exchange/Bone@3x.png" />
+          <text class="font_size24">{{ActivityLate.prize.dog_bone_num}}</text>
+        </view>
+        <view>
+          <image src="" style="width:50rpx;height:50rpx" />
+          <text class="font_size24"  decode="{{true}}" space="{{true}}">&nbsp;限量 &nbsp;{{ActivityLate.prize_num}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="exchange-center-View">
+    <view>
+      本期兑换礼物
+    </view>
+    <view>
+      {{ActivityLate.prize.name}}
+    </view>
+    <view bindtap="detailsGifts">
+      <image mode="aspectFit" src="{{ActivityLate.prize.image_url}}" />
+      <view class='showActivityLate'>
+         <text>点击查看奖品详情</text>
+      </view>
+    </view>
+    <view class="awardingRecords">
+      <center-btn btnConfig="center_BtnOkMoreChange" centerBtnText="查看我的兑奖记录" bindconfirmpay="awardingRecords"></center-btn>
+    </view>
+  </view>
+  <view class="exchange-bottom-View">
+    <view wx:if="{{listWinnerActivity.length != 0}}">
+      <text class="font_size32">兑换详情</text>
+    </view>
+    <view class="">
+      <view class="box ">
+        <view wx:for="{{listWinnerActivity}}" wx:key="items">
+          <image mode="aspectFit" src="{{item.head_image}}" />
+        </view>
+      </view>
+    </view>
+    <view class="exchange-bottom-View-font font_size24">
+      <view class="padding_30rpx">
+        <text>兑换须知</text>
+      </view>
+      <view class="padding_30rpx">
+        <text>{{ActivityLate.explain.exchange_notice}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="drawer_screen" bindtap="exchangeClose" data-statu="close" wx:if="{{showModalStatus}}"></view>
+  <view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+
+    <view class="drawer_title">
+      <text>兑换成功</text>
+      <image mode="aspectFit" src="https://www.yanggouleme.com/static/pet_dog/scene/prize_success.png" />
+      <view bindtap="exchangeClose" data-statu="close"></view>
+    </view>
+
+    <view class="drawer_content">
+      <view>
+        <image class="exchangeYes" mode="aspectFit" src="{{addWinner.prize_image}}" />
+      </view>
+      <center-btn btnConfig="center_BtnOkMoreChange" centerBtnText="填收货地址" bindconfirmpay="receivingAddress"></center-btn>
+    </view>
+  </view>
+
+  <view class="returnIndexView">
+    <returnHomeBtn bindclickBtn="returnIndex"></returnHomeBtn>
+  </view>
+
+</view>

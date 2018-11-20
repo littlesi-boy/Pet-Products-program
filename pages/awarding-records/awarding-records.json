@@ -1,0 +1,7 @@
+{
+  "navigationBarBackgroundColor": "#FFDD00",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "兑奖记录",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh":true
+}

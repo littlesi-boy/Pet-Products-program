@@ -1,0 +1,21 @@
+<import src="../../components/navbar/navbar.wxml" />
+
+
+<view>
+  <view>
+    <template is="navbar" data="{{menus,currentTab}}" />
+  </view>
+  <view class="images-view">
+    <view class='images'>
+      <image src='{{equipByData.image_url}}'></image>
+      <view>
+        <view>
+          <image src='../../image/addDog/xingxinghei@3x.png'></image><text>{{equipByData.happiness_num}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<backgroundLayer id='backgroundLayer' title='我是标题' content="确认卖出"  contentInfo="{{equipByData.name}}" contentBone="{{equipByData.dog_bone_num}}" cancelText='取消' confirm='谢谢你' bind:cancelEvent="_cancelEvent" bind:confirmEvent="_confirmEvent"></backgroundLayer>
+
+<leftRightBtn widths="550" leftBtnFontColor="#FFDD00" rightBtnFontColor="" leftBtnFont="卖了换骨头" rightBtnFont="添加狗狗周边" centerBtnText="22222" bind:leftBtn="confirmpayLeftBtn" bind:rightBtn="confirmpayRightBtn"></leftRightBtn>

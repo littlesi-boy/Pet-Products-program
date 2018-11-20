@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#FFDD00",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "养狗了么",
+  "backgroundTextStyle": "dark",
+  "backgroundColor": "#f4f4f4",
+  "enablePullDownRefresh": true
+}

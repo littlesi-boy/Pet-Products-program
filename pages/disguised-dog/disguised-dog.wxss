@@ -1,0 +1,332 @@
+@import '../../components/leftTitleView/leftTitleView.wxss';
+@import "../../components/empty/empty.wxss";
+@import '../../style/style.wxss';
+@import '../../style/Arrow.wxss';
+
+.color_ffe852 {
+  color: #ffe852;
+}
+
+.color_f15a2b {
+  color: #f15a2b;
+}
+
+.color_76c92c {
+  color: #76c92c;
+}
+
+.wx-switch-input {
+  width: 42px !important;
+  height: 20px !important;
+}
+
+.wx-switch-input::before {
+  width: 41px !important;
+  height: 20px !important;
+}
+
+.wx-switch-input::after {
+  width: 20px !important;
+  height: 18px !important;
+}
+
+.color_FFDD00 {
+  color: #fd0;
+}
+
+.disguisedDogBox {
+  padding-top: 40rpx;
+  position: relative;
+}
+
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #000;
+  opacity: 0.9;
+  overflow: hidden;
+}
+
+.drawer_box {
+  width: 520rpx;
+  position: fixed;
+  top: 11%;
+  left: 16.5%;
+  z-index: 1001;
+  background: #fd0;
+  border-radius: 16rpx;
+  padding-bottom: 44rpx;
+}
+
+
+
+
+.drawer_content {
+  padding: 0 40rpx;
+  height: 100%;
+}
+
+.leftDiv {
+  position: relative;
+  width: 264rpx;
+  height: 80rpx;
+  font-size: 32rpx;
+  border-bottom-right-radius: 50rpx;
+  border-top-right-radius: 50rpx;
+  background: #f3f3f4;
+}
+
+.leftDiv text {
+  position: absolute;
+  left: 15rpx;
+  line-height: 80rpx;
+  font-weight: bold;
+}
+
+.leftDiv switch {
+  position: absolute;
+  top: 14.6rpx;
+  right: 0;
+}
+
+.drawer_contents {
+  position: relative;
+}
+
+.disguisedDog-bigSmall {
+  width: 220rpx;
+  height: 280rpx;
+}
+
+.drawer_titles {
+  position: absolute;
+  top:17rpx;
+  left: 15rpx;
+}
+
+.drawer_contentBottoms {
+  width: 140rpx;
+  position: absolute;
+  top: 226rpx;
+  left: 81rpx;
+  font-size: 20rpx;
+}
+.drawer_contentBottoms>image{width: 20rpx;height: 20rpx;}
+.drawer_contentMiddle {
+  position:absolute;
+  top:32%;
+  left:34%;
+  width:33%;
+  height:33%;
+}
+
+
+.leftTitleViews {
+  height: 33rpx;
+  font-size: 18rpx;
+  color: #fff;
+  position: relative;
+}
+
+.leftTitleViews text {
+  position: absolute;
+  left: 33rpx;
+  top: 0rpx;
+  z-index: 99;
+  text-align: center;
+  line-height: 35rpx;
+}
+
+.leftTitleViews>image:nth-of-type(1) {
+  width: 36rpx;
+  height: 30rpx;
+  position: absolute;
+  left: -8rpx;
+  top: 0rpx;
+  z-index: 99;
+}
+
+.leftTitleViews>image:nth-of-type(2) {
+  width: 148rpx;
+  height: 33rpx;
+  position: absolute;
+  top: 0rpx;
+}
+
+.rightDiv {
+  position: absolute;
+  right: 0;
+  top: 10rpx;
+  z-index: 1500;
+}
+
+.disguisedDogImage {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 306rpx;
+}
+
+.disguisedDogImage>image:nth-of-type(1) {
+  width: 750rpx;
+  height: 628rpx;
+  display: block;
+}
+
+.disguisedDogImage>view:nth-of-type(1){
+  position: absolute;
+  top: 590rpx;
+  font-weight: bold;
+  width:100%;
+  text-align: center;
+}
+
+.disguisedDoginfo {
+  width: 654rpx;
+  margin: 350rpx 50rpx auto;
+  height: 220rpx;
+  background: #f3f3f4;
+  border-radius: 16rpx;
+}
+
+.disguisedDoginfo>view:nth-of-type(2) {
+  display: inline-block;
+  width: 59%;
+  height: 125rpx;
+  position: relative;
+}
+
+.disguisedDoginfoLeft {
+  position: absolute;
+  top: 44rpx;
+  left: 0rpx;
+  width: 40%;
+}
+
+.disguisedDoginfoLeftArrow {
+  position: absolute;
+  top: 44rpx;
+  left: 45%;
+}
+.disguisedDoginfoLeftArrow>image{
+  width: 30rpx;height: 30rpx;
+  vertical-align: middle;
+}
+.disguisedDoginfoLefts {
+  position: absolute;
+  top: 44rpx;
+  right: 0rpx;
+  width: 40%;
+  text-align: center;
+}
+
+.disguisedDoginfo>view:nth-of-type(3) {
+  display: inline-block;
+  width: 38%;
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+  height: 105rpx;
+  position: relative;
+  text-align: center;
+  line-height: 105rpx;
+}
+
+.disguisedDoginfo>view:nth-of-type(3)>view:nth-of-type(1) {
+  position: absolute;
+  left: 40rpx;
+  top: 10rpx;
+}
+
+.disguisedDoginfo>view:nth-of-type(3)>view:nth-of-type(1)>image {
+  width: 34rpx;
+  height: 70rpx;
+}
+
+.disguisedDoginfo>view:nth-of-type(3)>view:nth-of-type(2) {
+  position: absolute;
+  left: 80rpx;
+  font-size: 50rpx;
+}
+
+.disguisedDoginfo>view:nth-of-type(3)>image {
+  position: absolute;
+  left: 204rpx;
+  top: 24rpx;
+}
+
+.font-size36 {
+  font-size: 36rpx;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+
+.isSellOutInfo{position: absolute;text-align: center;color: white;bottom: 340rpx;width: 100%;}
+
+.leftRightBtn{margin-top: 52rpx;}
+
+
+
+
+/* 狗的位置配置 */
+.dog_configZ_index {
+  z-index: 190;
+}
+.dog_img{width: 750rpx;height: 628rpx; position: absolute;top: 0;left: 0;z-index: 290;}
+
+.dog_clothes {
+  position: absolute;top: 0;left: 0;
+  width: 750rpx;
+  height: 628rpx;
+  z-index: 300;
+}
+
+.dog_food_blow {
+  position: absolute;top: 0;left: 0;
+  width: 750rpx;
+  height: 628rpx;
+  z-index: 400;
+}
+
+.dog_toy {
+  position: absolute;top: 0;left: 0;
+  width: 750rpx;
+  height: 628rpx;
+}
+
+.dog_food {
+  position: absolute;top: 0;left: 0;
+  width: 750rpx;
+  height: 628rpx;
+  z-index: 180;
+}
+
+.dog_image_url {
+  position: absolute;top: 0;left: 0;
+  width: 750rpx;
+  height: 628rpx;
+}
+
+.dog_necklace {
+  position: absolute;top: 0;left: 0;
+  width: 750rpx;
+  height: 628rpx;
+  z-index: 400;
+}
+
+.dog_straw_mattress {
+  position: absolute;top: 0;left: 0;
+  width: 750rpx;
+  height: 628rpx;
+}
+
+.dog_snacks {
+  position: absolute;top: 0;left: 0;
+  width: 750rpx;
+  height: 628rpx;
+}

@@ -1,0 +1,42 @@
+@import '../../components/leftTitleView/leftTitleView.wxss';
+@import '../../style/Arrow.wxss';
+
+.sellOutDogView{position: relative;}
+.sellOutDogView>image:nth-of-type(1){height:660rpx; width: 552rpx; display: block;margin: 0 auto;}
+.sellOutDogViewBottom{text-align: center;width: 100%;position:absolute;
+bottom:27px;
+}
+.sellOutDogViewBottom>image{width:16rpx;height:32rpx;}
+.sellOutDogViewBottom>text{font-size: 40rpx;vertical-align: 2%;}
+
+.leftTitleViews{position: absolute;top: 35rpx;left: 140rpx;}
+
+
+
+
+.disguisedDoginfo{width: 654rpx;margin: 70rpx auto;height: 220rpx;background: #F3F3F4;border-radius: 16rpx;position: relative;}
+
+.disguisedDoginfo>view:nth-of-type(2){display: inline-block;width: 59%;height: 125rpx;font-size: 36rpx;}
+.disguisedDoginfoLeft{display: flex;display: -webkit-flex;align-items:center;
+justify-content:center;
+}
+.disguisedDoginfoLeftImage{
+width:18rpx;
+height:40rpx;
+} 
+.disguisedDoginfoLefts{display: flex;display: -webkit-flex;align-items:center;
+justify-content:flex-start;
+}
+ .disguisedDoginfoLefts>image{
+ width: 22rpx;height: 45rpx;} 
+
+
+.disguisedDoginfoLeftArrow{position: absolute;top: 70rpx;left: 318rpx;width: 50rpx;} 
+
+.sellOutDog-borderblue{height: 70rpx; text-align: center; font-size: 48rpx; font-weight: bold;  position: absolute;top: 65rpx;background: #FFDD00; width:210rpx;border-radius: 60rpx;left: 400rpx;line-height: 70rpx }
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#FFDD00",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "礼品详情",
+  "backgroundTextStyle": "light",
+  "usingComponents": {
+    "returnHomeBtn": "../../components/returnHomeBtn/returnHomeBtn"
+  }
+}

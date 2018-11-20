@@ -1,0 +1,106 @@
+<import src="../../components/leftTitleView/leftTitleView.wxml" />
+
+<import src="../../components/empty/empty.wxml" />
+
+
+<view class="disguisedDogBox">
+  <template wx:if="{{isShow == true}}" is="empty" data="{{type:'2'}}" />
+  <view wx:if="{{isShow == false}}">
+    <view class="leftDiv">
+      <text>装扮预览</text>
+      <switch checked="{{switch1Checked}}" color="#FFDD00" bindchange="switch1Change" />
+    </view>
+    <view class="rightDiv" bindtap="reward">
+      <view class="drawer_contents" animation="{{animInput}}">
+        <image mode="aspectFit" class="disguisedDog-bigSmall" src="../../image/disguisedDog/Group970@3x.png" />
+        <view class="drawer_titles">
+          <view class="leftTitleViews" style="width:{{equipData.name_len}}rpx">
+            <image src="../../image/DogTiele@3x.png" />
+            <text>{{titleInfo}}</text>
+            <image style="width:{{equipData.name_len}}rpx" src="../../image/dogbg@3x.png" />
+          </view>
+        </view>
+        <image class="drawer_contentMiddle" mode="aspectFit" src="{{equipData.image_url}}" />
+        <view class="drawer_contentBottoms">
+          <image src="../../image/addDog/xingxinghei@3x.png" />
+          <text style="vertical-align:2%;" decode="{{true}}" space="{{true}}">&nbsp;{{equipData.happiness_num}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="disguisedDogImage">
+          <view class="font_size24">{{dogByInfo.dog_type.type_name}}</view>
+
+       <image  src="https://www.yanggouleme.com/static/pet_dog/scene/background.png" />
+
+       <image  mode="aspectFit" class="dog_img  " src="{{dogByInfo.dog_type.dog_img}}"  />
+    <!-- 狗衣服 -->
+     <image   mode="aspectFit" class="dog_clothes  " src="{{equipData.equip_types === 'CLOTHES' && switch1Checked === true ? equipData.dogs_with_equip.image_url:dogByInfo.clothes.image_url}}"   />
+    <!-- 狗粮 -->
+     <image   mode="aspectFit" class="dog_food  " src="{{equipData.equip_types === 'FOOD' && switch1Checked === true ? equipData.dogs_with_equip.image_url:dogByInfo.food.image_url}}"   />
+    <!-- 狗盆 -->
+     <image   mode="aspectFit" class="dog_food_blow  " src="{{equipData.equip_types === 'FOOD_BLOW' && switch1Checked === true ? equipData.dogs_with_equip.image_url:dogByInfo.food_blow.image_url}}"   />
+    <!-- 玩具 -->
+     <image   mode="aspectFit" class="dog_toy  "  src="{{equipData.equip_types === 'TOY' && switch1Checked === true ? equipData.dogs_with_equip.image_url:dogByInfo.toys.image_url}}"   />
+    <!-- 狗项链 -->
+    <image   mode="aspectFit" class="dog_necklace  "  src="{{equipData.equip_types === 'NECKLACE' && switch1Checked === true ? equipData.dogs_with_equip.image_url:dogByInfo.necklace.image_url}}"   />
+    <!-- 狗垫子 -->
+    <image   mode="aspectFit" style="z-index: 280;" class="dog_straw_mattress " src="{{equipData.equip_types ===  'STRAW_MATTRESS' && switch1Checked === true ? equipData.dogs_with_equip.image_url : dogByInfo.straw_mattress.image_url}}" />
+    <!-- 狗垫子 -->
+    <image  mode="aspectFit" style="z-index: 280;" class="dog_straw_mattress " src="{{equipData.equip_types ===  'STRAW_MATTRESS' && switch1Checked === true  ? equipData.dogs_with_equip.after.image_url : dogByInfo.straw_mattress.after.image_url}}"  />
+
+    <image  mode="aspectFit" style="z-index: 300;" class="dog_straw_mattress " src="{{equipData.equip_types ===  'STRAW_MATTRESS' && switch1Checked === true  ? equipData.dogs_with_equip.before.image_url : dogByInfo.straw_mattress.before.image_url}}" />
+
+    <!-- 零食 -->
+      <image  mode="aspectFit" class="dog_snacks  " src="{{equipData.equip_types === 'SNACKS' && switch1Checked === true ? equipData.dogs_with_equip.image_url:dogByInfo.snacks.image_url}}"   />
+    </view>
+
+    <view class="disguisedDoginfo">
+      <view>
+        <template is="leftTitleView" data="{{titleInfo: '幸福值数值',widths:'256rpx',left:'70rpx',fontSize:'32rpx',top:'15rpx'}}" />
+      </view>
+      <view>
+        <view class="disguisedDoginfoLeft font-size36">
+           {{compareEquipData.old_num}}
+        </view>
+        <view class="disguisedDoginfoLeftArrow">
+          <image src="https://www.yanggouleme.com/static/pet_dog/scene/jiantou.png" />
+        </view>
+        <view class="disguisedDoginfoLefts font-size36">
+          {{compareEquipData.new_num}}
+        </view>
+      </view>
+      <view>
+        <view>
+          <image mode="aspectFit" wx:if="{{compareEquipData.type == 2}}"src="../../image/disguisedDog/-@3x.png" />
+          <image mode="aspectFit" wx:if="{{compareEquipData.type == 3}}"  src="../../image/disguisedDog/+@3x.png" />
+        </view>
+        <view  wx:if="{{compareEquipData.type == 1}}" class="color_ffe852" style="left:115rpx;">
+          {{compareEquipData.D_value}}
+        </view>
+        <view wx:if="{{compareEquipData.type == 2}}" class="color_f15a2b">
+          {{compareEquipData.D_value}}
+        </view>
+        <view wx:if="{{compareEquipData.type == 3}}" class="color_76c92c">
+          {{compareEquipData.D_value}}
+        </view>
+        
+        <image mode="aspectFit"  wx:if="{{compareEquipData.type == 2}}" style="width:22rpx;height:48rpx;" src="../../image/disguisedDog/Arrowbottom@3x.png" />
+       
+        <image mode="aspectFit" wx:if="{{compareEquipData.type == 3}}" style="width:22rpx;height:48rpx;" src="../../image/disguisedDog/ArrowTop@3x.png" />
+        
+      </view>
+    </view>
+    <view class="leftRightBtn">
+      <leftRightBtn widths="550" leftBtnFontColor="#FFDD00" rightBtnFontColor="" leftBtnFont="卖了换骨头" rightBtnFont="添加狗狗周边" btnConfig="{{center_Views}}" centerBtnText="22222" bind:leftBtn="confirmpayLeftBtn" bind:rightBtn="confirmpayRightBtn"></leftRightBtn>
+    </view>
+
+     <view class="drawer_screen" bindtap="reward"   animation="{{animationData}}"   wx:if="{{showDialogs === false}}" >
+         <view class="isSellOutInfo" wx:if="{{isStatus === 2}}"> 卖了可获得<text class="color_FFDD00">{{equipData.dog_bone_num}}</text>根狗骨头
+      </view>
+     </view>
+  </view>
+
+  <backgroundLayer id='backgroundLayer' title='我是标题' content="确认卖出"  contentInfo="{{titleInfo}}" contentBone="{{equipData.dog_bone_num}}" cancelText='取消' confirm='谢谢你' bind:cancelEvent="_cancelEvent" bind:confirmEvent="_confirmEvent"></backgroundLayer>
+
+</view>

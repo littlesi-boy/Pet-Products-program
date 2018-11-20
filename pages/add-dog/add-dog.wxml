@@ -1,0 +1,65 @@
+
+<import src="../../components/leftTitleView/leftTitleView.wxml" />
+
+<view>
+
+  <view class="disguisedDoginfo">
+    <view>
+        <view>
+            <template is="leftTitleView" data="{{titleInfo: '我的狗骨头',widths:'255rpx',left:'70rpx',fontSize:'32rpx',top:'15rpx'}}" />
+        </view>
+        <view>
+          <text>(添加狗狗需消耗</text><text>狗骨头</text>)
+        </view>
+    </view>
+    <view>
+      <view class="disguisedDoginfoLeft">
+        <image  src="../../image/exchange/Bone@3xs.png" />
+        <text  decode="{{true}}" space="{{true}}">&nbsp;{{rankData.dog_bone_num}}</text>
+      </view>
+      <view class="disguisedDoginfoLefts">
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;-&nbsp;&nbsp;{{dogInformation.dog_bone_num}}</text>
+      </view>  
+    </view>
+ 
+  </view>
+
+  <view class="swiperView">
+    <view class="titles font_size24">
+     <text class="color_#202020"> {{dogInformation.type_name}} </text><text class="color_8E8E8E">{{dogInformation.brief_introduction}}</text>
+    </view>
+    <view class="share" bindtap="share">
+      <image mode="aspectFit" style="top:{{addDog_bone}}" src="../../image/exchange/Bone@3xs.png" />
+      <text class="font-size36" >{{dogInformation.dog_bone_num}}</text>
+      
+    </view>
+
+    <view class="swiperLeft" bindtap="swiperLeft">
+      <view class="leftBtn">
+
+      </view>
+    </view>
+    <view class="swiperRight" bindtap="swiperRight">
+      <view class="rightBtn">
+
+      </view>
+    </view>
+    <image  class="swiperMiddle"  mode="aspectFit" src="https://www.yanggouleme.com/static/pet_dog/scene/background.png" />
+    <image class="dog_img" src="{{dogInformation.dog_img}}" />
+  </view>
+
+  <view class="center_View">
+      <view class="center_Btn center_BtnOkMoreChange"  bindtap="set_AddDog" > 
+        <image src="../../image/Group930@3x.png" />
+        <text class="text" decode="{{true}}" space="{{true}}">&nbsp;带我回家</text>
+      </view>
+  </view>
+
+    <view class="text_AlignCenter font_size28 color_8E8E8E marginTop">
+        喜欢就带我回家吧！
+    </view>
+    <view class="text_AlignCenter font_size28 color_8E8E8E marginBottom">
+        还可以增加你的幸福值哦！！！
+    </view>
+    <returnHomeBtn bindclickBtn="returnIndex"></returnHomeBtn>
+</view>

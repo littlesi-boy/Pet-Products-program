@@ -1,0 +1,75 @@
+<import src="../../components/navbar/navbar.wxml" />
+<import src="../../components/loading/loading.wxml" />
+
+
+<view>
+  <view>
+    <template is="navbar" data="{{menus,currentTab}}" />
+  </view>
+  <view style='padding-bottom: 100rpx;'>
+    <view class="item_list">
+      <view class='items' data-id="{{item.equip.id}}" bindtap="knapsackDetails" wx:for="{{knapsackList}}" wx:key="key">
+        <image src="{{item.equip.image_url}}"></image>
+        <view>
+          <view>
+            <image src='../../image/addDog/xingxinghei@3x.png'></image>
+            <text>{{item.equip.happiness_num}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="page-end" wx:if="{{pageEnd}}">没有更多数据了!</view>
+      <template wx:if="{{pageLoading}}" is="pageLoading" />
+      <view class="page-error" wx:if="{{pageError}}">网络超时!</view>
+    </view>
+  </view>
+  <view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+
+  <view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+    <view class="drawer_content">
+      <view class="content_top_view">
+        <view>
+          <view>
+            批量卖出配件
+          </view>
+          <view>
+            只能选择仓库里的装扮，已经穿上的装扮不会被卖出
+          </view>
+        </view>
+        <view bindtap="powerDrawer" data-statu="close">
+          <view>
+            <view class="cancel">
+
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="content_middle_view">
+        <view wx:for="{{menus}}" wx:for-index="index" bindtap="clickTop" data-data="{{item.name}}" data-index="{{index}}" class="content_middle_items {{item.isSelect === true ?'content_middle_items_isSelectTrue':'content_middle_items_isSelectFalse'}}" wx:key="{{item.id}}">
+          {{item.name}}
+        </view>
+      </view>
+      <view class="content_dress_number">
+        <view>
+          共选中
+          <text>{{equipDepotNumData.equip_num}}</text> 件装扮
+        </view>
+        <view>
+          <text>总价值</text>
+          <image mode="aspectFit" src="../../image/exchange/Bone@3xs.png" />
+          <text>{{equipDepotNumData.dog_bone_num}}</text>
+          <text>狗骨头</text>
+        </view>
+      </view>
+      <view class="content_bottom_view">
+        <center-btn bindconfirmpay="determine" data-statu="close" btnConfig="center_BtnOkMoreChange" centerBtnText="确认卖出" widths="500"></center-btn>
+      </view>
+    </view>
+  </view>
+   <view class="share-btn">
+    <view>
+      <center-btn bindconfirmpay="powerDrawer" data-statu="open" btnConfig="center_BtnOkMoreChange" centerBtnText="批量卖出" widths="500"></center-btn>
+    </view>
+  </view> 
+</view>

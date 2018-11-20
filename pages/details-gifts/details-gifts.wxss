@@ -1,0 +1,5 @@
+@import '../../style/share-btn.wxss';
+
+image{width: 100%;height: 100%;}
+
+.detailsGiftsView{padding-bottom: 30rpx;}

@@ -1,0 +1,12 @@
+{
+  "navigationBarBackgroundColor": "#FFDD00",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "加载中",
+  "backgroundTextStyle": "dark",
+  "backgroundColor": "#f4f4f4",
+  "usingComponents": {
+    "leftRightBtn": "../../components/leftRightBtn/leftRightBtn",
+    "center-btn": "../../components/centerBtn/centerBtn"
+  },
+  "enablePullDownRefresh": true
+}

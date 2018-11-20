@@ -1,0 +1,11 @@
+{
+  "navigationBarBackgroundColor": "#FFDD00",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "分享狗狗",
+  "backgroundTextStyle": "light",
+  "usingComponents": {
+   "leftRightBtn": "../../components/leftRightBtn/leftRightBtn"
+ },
+ "disableScroll": true
+
+}

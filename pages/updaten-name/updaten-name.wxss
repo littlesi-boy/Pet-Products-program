@@ -1,0 +1,11 @@
+@import '../receiving-address/receiving-address.wxss';
+
+
+
+
+.textarea{font-size: 28rpx;padding: 20rpx 32rpx;}
+.textarea textarea{width: 92%;background: #f4f4f4;padding: 30rpx;}
+.text-number{text-align: right;font-size: 24rpx;color: #ADADAD;padding-right: 32rpx;}
+
+
+

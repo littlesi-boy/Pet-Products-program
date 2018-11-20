@@ -1,0 +1,85 @@
+<wxs src="../../utils/date.wxs" module="util" />
+
+<view class="shareDog">
+  <view class="cellItem">
+    <view class="cellItemTop">
+      <view>
+        <image mode="aspectFit" class="cellItemHeadImage" src="{{shareWordArray.master.head_image}}" />
+      </view>
+      <view>
+        <view class="font_size28">
+          {{shareWordArray.master.nick_name}}
+        </view>
+        <view class="font_size24">
+          {{shareWordDate}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="shareDog-shareFont">
+    <view>
+      <textarea class="textareaColor" class="font_size24" value="{{textareaValue}}" bindblur="textareaValues" />
+    </view>
+    <view class="font_size24 font-weightBold">
+      <view bindtap="switchSentence">换一句</view>
+      <view bindtap="manualInput">手动输入</view>
+    </view>
+  </view>
+
+  <view class="shareDog-MyDogImage">
+    <view class="font_size24">
+      <text class="font-weightBold">{{shareWordArray.dog.dog_type.type_name}}</text>
+      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;{{shareWordArray.dog.dog_type.brief_introduction}}</text>
+    </view>
+    <image mode="aspectFit" src="https://www.yanggouleme.com/static/pet_dog/scene/background.png" />
+
+    <!--狗 -->
+    <image mode="aspectFit" class="dog_img " src="{{ shareWordArray.dog.dog_type.dog_img}}" />
+    <!-- 狗衣服 -->
+    <image mode="aspectFit" class="dog_clothes dog_configZ_index" src="{{ shareWordArray.dog.clothes.image_url}}" />
+    <!-- 狗粮 -->
+    <image mode="aspectFit" class="dog_food" src="{{ shareWordArray.dog.food.image_url}}" />
+    <!-- 狗盆 -->
+    <image mode="aspectFit" class="dog_food_blow dog_configZ_index" src="{{ shareWordArray.dog.food_blow.image_url}}" />
+    <!-- 玩具 -->
+    <image mode="aspectFit" class="dog_toy dog_configZ_index" src="{{ shareWordArray.dog.toys.image_url}}" />
+    <!-- 狗项链 -->
+    <image mode="aspectFit" class="dog_necklace dog_configZ_index" src="{{ shareWordArray.dog.necklace.image_url}}" />
+    <view class="" wx:if="{{shareWordArray.dog.state === 1}}">
+      <!-- 狗垫子 -->
+      <image mode="aspectFit" style="z-index: 280;" class="dog_straw_mattress " src="{{shareWordArray.dog.straw_mattress.image_url}}" />
+    </view>
+    <view wx:if="{{shareWordArray.dog.state === 2}}">
+      <!-- 狗垫子 -->
+      <image mode="aspectFit" style="z-index: 280;" class="dog_straw_mattress " src="{{shareWordArray.dog.straw_mattress.after}}" />
+      <image mode="aspectFit" style="z-index: 300;" class="dog_straw_mattress " src="{{shareWordArray.dog.straw_mattress.before}}" />
+    </view>
+    <!-- 零食 -->
+    <image mode="aspectFit" class="dog_snacks dog_configZ_index" src="{{ shareWordArray.dog.snacks.image_url}}" />
+  </view>
+  <view class="btn">
+    <leftRightBtn widths="550" leftBtnFont="分享得骨头" leftBtnFontColor="#FFE852" rightBtnFont="生成海报" btnConfig="{{center_Views}}" bindleftBtn="bindleftBtn" bindrightBtn="bindrightBtn"></leftRightBtn>
+  </view>
+  <view class="shareDog-bottomInfo font_size28">
+    <button class="shareType" open-type="share" size="defaultSize">Button</button>
+    <view bindtap="bindrightBtn" class="rihthBtn"></view>
+    <view>
+      Tips：分享到微信群邀请好友加骨头
+    </view>
+    <view>
+      生成海报
+      <text class="color_FFDD00">分享之后</text> 可获得好友撒骨头
+    </view>
+  </view>
+  <view class="bottomBigView" wx:if="{{bottomBigView}}">
+    <view class="drawer_screen"> </view>
+    <view class="bottomView">
+      <image src="https://www.yanggouleme.com/static/pet_dog/scene/jiazai.png" />
+      <view>
+        <view>正在生成海报…</view>
+        <view>请稍后</view>
+      </view>
+      <image src="https://www.yanggouleme.com/static/pet_dog/scene/dog_image1.png" />
+    </view>
+  </view>
+</view>

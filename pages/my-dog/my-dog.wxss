@@ -1,0 +1,137 @@
+
+@import '../../style/style.wxss';
+@import '../../components/leftTitleView/leftTitleView.wxss';
+@import '../../style/share-btn.wxss';
+
+.color_8E8E8E{color: #8E8E8E;}
+.color_black{color: black}
+.font_40rpx{font-size: 40rpx;font-weight: bold;}
+.myDog-topBox{padding-top: 30rpx;}
+.myDog-leftbox{width: 42%;height: 160rpx;background: #FFDD00;display: inline-block;margin: 0 25rpx;border-radius: 16rpx;}
+
+.myDog-rightbox{width: 42%;height: 160rpx;background: #FFDD00;display: inline-block;margin: 0 25rpx;border-radius: 16rpx;}
+
+
+.myDog-leftbox>view:nth-of-type(2) image{width: 30rpx;height: 30rpx;margin-top:24rpx;}
+.myDog-leftbox>view:nth-of-type(2),.myDog-rightbox>view:nth-of-type(2) {text-align: center;}
+.myDog-rightbox>view:nth-of-type(2) image{width: 30rpx;height: 30rpx;margin-top:24rpx;}
+
+
+
+
+
+
+
+
+.swiperView{height: 628rpx;position: relative;margin-bottom: 30rpx;}
+.share{position: absolute;right: 25rpx;top: 20rpx;z-index: 1000;}
+.share image{width: 146rpx;height: 106rpx;}
+
+.swiperRight{position: absolute;top: 270rpx;right: 20rpx;}
+
+.rightBtn{height:70rpx; width:44rpx; display:block; position:relative;z-index: 1000;} 
+.rightBtn:before{content:''; height:44rpx; width:44rpx; display:block; border:8.2rpx solid #333; border-left-width:0; border-top-width:0; transform:rotate(-45deg);  position:absolute; top:10rpx; right:10rpx;}
+
+.swiperLeft{position: absolute;top: 270rpx;left: 20rpx;}
+
+.leftBtn{height:70rpx; width:44rpx; display:block; position:relative;z-index: 1000;} 
+.leftBtn:before{content:''; height:44rpx; width:44rpx; display:block; border:8.2rpx solid #333; border-right-width:0; border-bottom-width:0; transform:rotate(-45deg); position:absolute; top:10rpx; left:10rpx;}
+
+
+.swiperBottom{position: absolute;bottom: 0rpx;left: 316rpx;}
+.swiperBottom image{width: 30rpx;height: 30rpx;margin-right: 10rpx;}
+.swiperBottom text{vertical-align:2%;font-weight: bold;}
+.swiperBottom>view:nth-of-type(2){color: #707070;font-weight: normal;}
+
+.swiperMiddle{position: absolute;width:  750rpx;height: 628rpx;}
+
+.marginTop{margin-top: 40rpx;}
+.titles{position: absolute;left: 35rpx;top: 50rpx;}
+.titles>text:nth-of-type(1){font-weight: bold;font-size: 24rpx;}
+
+.titles>text:nth-of-type(2){font-weight: normal;}
+
+.marginBottom{margin-bottom: 40rpx;}  
+
+
+
+
+.center_View{width: 100%;}
+.center_Btn{
+    width: 550rpx;
+    height: 80rpx;
+    margin: 0 auto;
+    border-radius: 40rpx;
+    padding: 0 20rpx;
+    text-align: center;
+    line-height: 83rpx;
+}
+.center_Btn image{width: 36rpx;height: 36rpx;vertical-align:-3%;} 
+
+.text{font-weight: bold; }
+
+/* 已处理样式 */
+.center_BtnOkMoreChange{ background: #FFE852;color: #202020;font-size: 36rpx}
+
+
+.dog_img{width: 750rpx;height: 628rpx; position: absolute;z-index: 290;}
+.dog_clothes{position: absolute;width:  750rpx;height: 628rpx;z-index: 290; }
+.dog_food_blow{position: absolute;width:  750rpx;height: 628rpx;}
+.dog_toy{position: absolute;width:  750rpx;height: 628rpx;}
+.dog_food{position: absolute;width:  750rpx;height: 628rpx;z-index: 200;}
+.dog_image_url{position: absolute;width:  750rpx;height: 628rpx;}
+.dog_necklace{position: absolute;width:  750rpx;height: 628rpx;}
+.dog_straw_mattress{position: absolute;width:  750rpx;height: 628rpx;}
+
+.dog_snacks{position: absolute;width:  750rpx;height: 628rpx;}
+.dog_configZ_index{z-index: 888;}
+
+
+.bottom-btn{display: flex;}
+.bottom-btn>view:nth-of-type(1){justify-content: flex-start;min-width: 70%;}
+.bottom-btn>view:nth-of-type(2){display: flex; justify-content: flex-end;min-width: 30%;}
+.updaten_name>image{width: 216rpx;height: 76rpx;}
+
+
+@keyframes swing {
+  0%{
+    transform:rotate(10deg)
+  }
+  10% {
+    transform:rotate(6deg)
+  }
+  20% {
+    transform:rotate(0deg)
+  }
+  40% {
+    transform:rotate(-5deg)
+  }
+  40% {
+    transform:rotate(-10deg)
+  }
+  50% {
+    transform:rotate(-15deg)
+  }
+  60% {
+    transform:rotate(-10deg)
+  }
+  70% {
+    transform:rotate(-5deg)
+  }
+  80% {
+    transform:rotate(0deg)
+  }
+  90% {
+    transform:rotate(6deg)
+  }
+  100%{
+    transform:rotate(10deg)
+  }
+  
+  }
+  .share {
+    transform-origin: center;
+    animation-fill-mode:both;
+    animation:swing 1.2s infinite;
+  }
+  

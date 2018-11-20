@@ -1,0 +1,11 @@
+{
+  "navigationBarBackgroundColor": "#FFDD00",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "我的背包",
+  "backgroundTextStyle": "dark",
+  "backgroundColor": "#f4f4f4",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "center-btn": "../../components/centerBtn/centerBtn"
+  }
+}

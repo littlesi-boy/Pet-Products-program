@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#FFDD00",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "设置名称",
+  "backgroundTextStyle": "light",
+  "usingComponents": {
+    "center-btn": "../../components/centerBtn/centerBtn"
+  }
+}

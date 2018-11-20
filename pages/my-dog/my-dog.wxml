@@ -1,0 +1,120 @@
+<import src="../../components/leftTitleView/leftTitleView.wxml" />
+
+
+<view>
+  <view class="myDog-topBox padding_40rpx">
+    <view class="myDog-leftbox">
+      <template is="leftTitleView" data="{{titleInfo: '我的狗骨头',widths:'250rpx',left:'70rpx',fontSize:'32rpx',top:'15rpx'}}" />
+      <view>
+        <image mode="aspectFit" src="../../image/exchange/Bone@3xs.png" />
+        <text decode="{{true}}" space="{{true}}" class="font_40rpx">&nbsp;{{rankData.dog_bone_num}}</text>
+      </view>
+    </view>
+    <view class="myDog-rightbox">
+      <template is="leftTitleView" data="{{titleInfo: '狗狗幸福值',widths:'250rpx',left:'70rpx',fontSize:'32rpx',top:'15rpx'}}" />
+      <view>
+        <image mode="aspectFit" src="../../image/addDog/xingxinghei@3x.png" />
+        <text decode="{{true}}" space="{{true}}" class="font_40rpx">&nbsp;{{rankData.happiness_num}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="swiperView">
+
+    <image mode="aspectFit" class="dog_img" src="{{dogByInfoData[dogIndex].dog_type.dog_img}}" />
+    <!-- 狗衣服 -->
+
+    <image mode="aspectFit" class="dog_clothes dog_configZ_index" src="{{dogByInfoData[dogIndex].clothes.image_url}}" />
+    <!-- 狗粮 -->
+
+    <image mode="aspectFit" class="dog_food " src="{{dogByInfoData[dogIndex].food.image_url}}" />
+    <!-- 狗盆 -->
+
+    <image mode="aspectFit" class="dog_food_blow dog_configZ_index" src="{{dogByInfoData[dogIndex].food_blow.image_url}}" />
+    <!-- 玩具 -->
+
+    <image mode="aspectFit" class="dog_toy dog_configZ_index" src="{{dogByInfoData[dogIndex].toys.image_url}}" />
+    <!-- 狗项链 -->
+
+    <image mode="aspectFit" class="dog_necklace dog_configZ_index" src="{{dogByInfoData[dogIndex].necklace.image_url}}" />
+
+    <view class="" wx:if="{{dogByInfoData[dogIndex].state === 1}}">
+      <!-- 狗垫子 -->
+      <image animation="{{animations}}" mode="aspectFit" style="z-index: 280;" class="dog_straw_mattress " src="{{dogByInfoData[dogIndex].straw_mattress.image_url}}" />
+
+    </view>
+
+    <view class="" wx:if="{{dogByInfoData[dogIndex].state === 2}}">
+      <!-- 狗垫子 -->
+      <image animation="{{animations}}" mode="aspectFit" style="z-index: 280;" class="dog_straw_mattress " src="{{dogByInfoData[dogIndex].straw_mattress.after.image_url}}" />
+
+      <image animation="{{animations}}" mode="aspectFit" style="z-index: 300;" class="dog_straw_mattress " src="{{dogByInfoData[dogIndex].straw_mattress.before.image_url}}" />
+
+    </view>
+    <!-- 零食 -->
+    <image mode="aspectFit" class="dog_snacks dog_configZ_index" src="{{dogByInfoData[dogIndex].snacks.image_url}}" />
+
+    <view class="titles font_size24">
+      <text class="color_#202020"> {{dogByInfoData[dogIndex].dog_type.type_name}} </text>
+      <text class="color_#202020">{{dogByInfoData[dogIndex].dog_type.brief_introduction}}</text>
+    </view>
+    <view class="share" bindtap="share" data-dogtypeid="{{dogByInfoData[dogIndex].dog_type.id}}" data-dogid="{{dogByInfoData[dogIndex].id}}">
+      <image mode="aspectFit" src="../../image/fenxiang@3x.png" />
+    </view>
+
+    <view class="swiperLeft" bindtap="swiperLeft" wx:if="{{dogByInfoData.length != 1}}">
+      <view class="leftBtn">
+
+      </view>
+    </view>
+    <view class="swiperRight" bindtap="swiperRight" wx:if="{{dogByInfoData.length != 1}}">
+      <view class="rightBtn">
+
+      </view>
+    </view>
+    <image mode="aspectFit" class="swiperMiddle" src="https://www.yanggouleme.com/static/pet_dog/scene/background.png" />
+
+    <view class="swiperBottom">
+      <view>
+        <image src="../../image/addDog/xingxinghei@3x.png" />
+        <text class="font_size32">{{dogByInfoData[dogIndex].happiness_num}}</text>
+      </view>
+      <view class="font_size24">
+        当前幸福值
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{centerBtnText != '抽取狗狗周边'}}">
+    <center-btn btnConfig="{{center_MoreChange}}" centerBtnText="{{centerBtnText}}" widths="{{widths}}" bindconfirmpay="shareDog"></center-btn>
+  </view>
+
+  <view class="center_View" wx:if="{{centerBtnText == '抽取狗狗周边'}}">
+    <view class="center_Btn center_BtnOkMoreChange" bindtap="shareDog">
+      <image mode="aspectFit" src="https://www.yanggouleme.com/static/other_image/xingxing.png" />
+      <text class="text" decode="{{true}}" space="{{true}}" class="font_40rpx">&nbsp;{{centerBtnText}}</text>
+    </view>
+  </view>
+
+  <view class="text_AlignCenter font_size28 color_8E8E8E marginTop">
+    每天前3次分享每次可获得3次抽奖机会
+  </view>
+  <view class="text_AlignCenter font_size28 color_8E8E8E marginBottom">
+    今天还有
+    <text class="color_black">{{luckyAndShareData.lucky_equip_time}}</text>次抽奖机会 已分享
+    <text class="color_black">{{luckyAndShareData.share_sum_time}}</text>次
+  </view>
+
+  <view class="share-btn">
+    <view class="bottom-btn" >
+      <view>
+        <returnHomeBtn bindclickBtn="returnIndex"></returnHomeBtn>
+      </view>
+      <view>
+        <view class='updaten_name' bindtap="updatenName">
+          <image src='../../image/rightBtn@3x.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

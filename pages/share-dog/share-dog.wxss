@@ -1,0 +1,106 @@
+
+@import '../../style/style.wxss';
+
+.font-weightBold{font-weight: bold;}
+.color_FFDD00{color: #FFDD00;}
+.textareaColor{color:#575757; font-weight: normal;}
+.btn{z-index: 8888;}
+.cellItem{height: 130rpx;}
+.cellItemTop>view:nth-of-type(1){width: 14%;display: inline-block;padding-left: 30rpx;height: 90rpx;}
+.cellItemTop>view:nth-of-type(2){width: 70%;display: inline-block;padding-left: 1rpx;position: relative;height: 90rpx}
+.cellItemTop>view:nth-of-type(2)>view:nth-of-type(1){position: absolute;top: 20rpx;font-size: 28rpx;font-weight: 600;}
+.cellItemTop>view:nth-of-type(2)>view:nth-of-type(2){position: absolute;bottom: 0rpx;color: #8E8E8E;}
+
+.cellItemHeadImage{width: 80rpx;height: 80rpx;border: solid 4rpx #FFDD00;border-radius: 50%;}
+
+.shareDog{padding: 30rpx 0;}
+.shareDog-shareFont{position: relative;}
+ .shareDog-shareFont>view:nth-of-type(1){width: 593rpx;background:#F3F3F4;margin: 0 auto;border-radius: 16rpx;padding: 30rpx 50rpx;height: 160rpx;} 
+
+.shareDog-shareFont>view:nth-of-type(1)>textarea{width: 580rpx;height: 140rpx;color: #575757;}
+
+
+.shareDog-shareFont>view:nth-of-type(2) {position: absolute;top: 170rpx;left: 320rpx;z-index: 2000;}
+.shareDog-shareFont>view:nth-of-type(2) view{display: inline-block;width:180rpx; text-align: center;}
+.shareDog-shareFont>view:nth-of-type(2)>view:nth-of-type(2){border-left: solid 1rpx rgba(0, 0, 0, 0.5);padding-left: 20rpx;}
+
+.shareDog-MyDogImage{position: relative;z-index: 333;height: 592rpx;}
+
+.shareDog-MyDogImage>view:nth-of-type(1){padding-top: 30rpx;padding-left: 30rpx;}
+.shareDog-MyDogImage>view:nth-of-type(1)>text:nth-of-type(2){font-weight: normal;}
+.shareDog-MyDogImage>image:nth-of-type(1){width: 750rpx;height: 628rpx;position: absolute;top: -25rpx;}
+
+
+
+.shareDog-bottomInfo{text-align: center;padding-top: 30rpx;position: relative;margin-bottom: 30rpx;z-index: 999;}
+
+.shareType{position:absolute;
+    top:-81rpx;
+    left:86rpx;
+    width:245rpx;
+    opacity:0;
+    }
+
+
+
+    .dog_configZ_index{z-index: 888;}
+    .dog_img{width: 750rpx;height: 628rpx; position: absolute;z-index: 290;top: -25rpx;}
+    .dog_clothes{position: absolute;width:  750rpx;height: 628rpx; top: -25rpx;}
+    .dog_food_blow{position: absolute;width:  750rpx;height: 628rpx;top: -25rpx;}
+    .dog_toy{position: absolute;width:  750rpx;height: 628rpx;top: -25rpx;}
+    .dog_food{position: absolute;width:  750rpx;height: 628rpx;z-index: 200;top: -25rpx;}
+    .dog_image_url{position: absolute;width:  750rpx;height: 628rpx;top: -25rpx;}
+    .dog_necklace{position: absolute;width:  750rpx;height: 628rpx;top: -25rpx;}
+    .dog_straw_mattress{position: absolute;width:  750rpx;height: 628rpx;z-index: 300;top: -25rpx;}
+    .dog_snacks{position: absolute;width:  750rpx;height: 628rpx;top: -25rpx;}
+    
+    
+
+
+
+.rihthBtn{width:300rpx;height: 68rpx;position: absolute;z-index: 5000;top: -72rpx;right:40rpx;}
+.drawer_screen {  
+    width: 100%;  
+    height: 100%;  
+    position: fixed;  
+    top: 0;  
+    left: 0;  
+    z-index: 1000;  
+    background: #000;  
+    opacity: 0.5;  
+    overflow: hidden;  
+  }  
+.bottomView{width: 100%; height: 260rpx;opacity: 1;  background: #FFDD00;position: absolute;bottom: 0;z-index: 1100;}
+    
+
+.bottomView>image:nth-of-type(1) {
+    position: absolute;
+    z-index: 1100;  
+    margin-left: 20rpx;
+    margin-top: 42rpx;
+    height: 160rpx;
+    width: 160rpx;
+    border-radius: 50%;
+    animation: headRotate 1s linear infinite
+  }
+  .bottomView>view:nth-of-type(1){position: absolute;left:249rpx;top:75rpx;}
+.bottomView>view:nth-of-type(1)>view:nth-of-type(1) {
+    font-size: 32rpx;color: #202020;font-weight: bold;
+}
+.bottomView>view:nth-of-type(1)>view:nth-of-type(2) {
+    font-size: 24rpx;color: #707070;
+}
+.bottomView>image:nth-of-type(2) {
+    width: 144rpx;
+    height: 184rpx;
+    position: absolute;
+    right:20rpx;
+top:40rpx;
+
+}
+  /* 旋转效果  */
+  @keyframes headRotate{
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+  }
