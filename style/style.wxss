@@ -1,0 +1,11 @@
+.font_size32{font-size: 32rpx;}
+.font_size24{font-size: 24rpx;}
+.font_size28{font-size: 28rpx;}
+
+
+.color_#202020{color: #202020;font-weight: bold;}
+
+.text_AlignRight{text-align: right;}
+.text_AlignLeft{text-align: left;}
+.text_AlignCenter{text-align: center;}
+.padding_40rpx{padding: 0 57rpx;}

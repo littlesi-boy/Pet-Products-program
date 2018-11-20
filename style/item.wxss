@@ -1,0 +1,29 @@
+.cell {
+  font-size: 22rpx;
+  display: flex;
+  line-height: 82rpx;
+  border-top: 22rpx solid #f2f0f1;
+  border-bottom: 20rpx solid #f2f0f1;
+}
+
+.cellLeft {
+  width: 50%;
+  color: #000;
+  font-size: 34rpx;
+  display: flex;
+}
+
+.cellLeft>view {
+  padding-top: 27.5rpx;
+}
+
+.cellLeft text {
+  padding-left: 20rpx;
+  padding-top: 17rpx;
+}
+
+.cellRight {
+  padding-top: 17rpx;
+  justify-content: space-between;
+  width: 50%;
+}

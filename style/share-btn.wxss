@@ -1,0 +1,10 @@
+.share-btn {
+  margin: 0  auto;
+  width: 100%;
+  color: #fff;
+  position: fixed;
+  bottom: 0rpx;
+  font-size: 36rpx;
+  padding-top: 19rpx;
+  height: 94rpx;
+}

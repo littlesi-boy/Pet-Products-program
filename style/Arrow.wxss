@@ -1,0 +1,17 @@
+.Arrowleft {
+  width: 17rpx;
+  height: 17rpx;
+  border-top: 6rpx solid #adadad;
+  border-right: 6rpx solid #adadad;
+  transform: rotate(45deg);
+  display: inline-block;
+}
+
+.Arrowlefts {
+  width: 17rpx;
+  height: 17rpx;
+  border-top: 6rpx solid #000;
+  border-right: 6rpx solid #000;
+  transform: rotate(45deg);
+  display: inline-block;
+}

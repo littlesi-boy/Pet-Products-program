@@ -1,0 +1,36 @@
+function handleDate(data) {
+    if (data == '' || data == undefined || data == null || data == NaN) {
+        return
+    } else {
+        return changeDate(data)
+    }
+}
+
+function changeDate(str) {
+    var time;
+    if (str) {
+        var year = str.slice(0, 10);
+        time = year
+    } else {
+        time = "";
+    }
+    return time;
+}
+
+
+function HandleDatesString(time, type) {
+    var n = time.slice(0, 4)
+    var cha = time.slice(5, 7)
+    var month = time.slice(8, 10);
+    if (type === 1) {
+        return cha + '月' + month + '日'
+    }
+    if (type === 2) {
+        return n + "年" + cha + '月' + month + '日'
+    }
+}
+module.exports = {
+    handleDate: handleDate,
+    handleDates: changeDate,
+    HandleDatesString: HandleDatesString
+}
