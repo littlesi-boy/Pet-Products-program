@@ -1,0 +1,14 @@
+.imagesType1{
+    height: 1240rpx;
+    display: block;
+    margin: 30rpx auto;
+}
+.imagesType2{
+    width: 500rpx;
+    height:877rpx;
+    display: block;
+    margin: 0 auto;
+}
+
+.emptyText{text-align: center;font-size: 24rpx;position: absolute;display: block;top: 350rpx;left: 160rpx;color: #575757;font-weight: normal;}
+

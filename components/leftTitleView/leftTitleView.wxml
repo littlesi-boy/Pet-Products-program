@@ -1,0 +1,14 @@
+
+<template name="leftTitleView">
+    <view>
+        <view class="leftTitleView" style="width:{{widths}};font-size: {{fontSize}};">
+            <image mode="aspectFit"  src="/image/DogTiele@3x.png" /> 
+           <!-- 
+            <text style="left:{{left}};top:{{top}};">{{titleInfo}}</text>
+            -->
+            <text style="left:{{left}};">{{titleInfo}}</text>
+
+            <image  style="width:{{widths}};height:100%; " src="../../image/dogbg@3x.png" />
+        </view>
+    </view>
+</template>

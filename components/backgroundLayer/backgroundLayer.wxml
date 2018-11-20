@@ -1,0 +1,21 @@
+<view class='wx_dialog_container' hidden="{{!isShow}}">
+  <view class='wx-mask'></view>
+  <view class='wx-dialog'>
+    <view class='wx-dialog-title'>
+      <view class="leftTitleViews">
+        <view>
+          <view class="leftTitleView">
+            <text>确认卖了换骨头?</text>
+           <image src="/image/DogTiele@3x.png" /> <text style="left:{{left}};top:{{top}};">{{titleInfo}}</text>
+           <image src="../../image/dogbg@3x.png" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='wx-dialog-content'>{{ content }}"{{ contentInfo }}" 换取 <text class="fontSize">{{contentBone}}根骨头?</text></view>
+    <view class='wx-dialog-footer'>
+      <view class='wx-dialog-btn' catchtap='_cancelEvent'>{{ cancelText }}</view>
+      <view class='wx-dialog-btn' catchtap='_confirmEvent'>{{ confirmText }}</view>
+    </view>
+  </view>
+</view>

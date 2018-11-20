@@ -1,0 +1,3 @@
+<template name="pageLoading">
+  <view class="page-loading"><image class="loading-icon" src="/image/loading.gif" mode="aspectFit" /><text style="margin-left:10rpx;">加载中</text></view>
+</template>

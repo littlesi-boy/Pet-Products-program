@@ -1,0 +1,9 @@
+<template name="empty">
+    <view style="position: relative;">
+        <image wx:if="{{type == 1}}"  mode="aspectFit" class="imagesType1" src="https://www.yanggouleme.com/static/pet_dog/scene/fail3x.png" />
+        <image wx:if="{{type == 2}}" class="imagesType2" src="/image/Group923@3x.png" />
+        <view class="emptyText">
+            {{data }}
+        </view>
+    </view>
+</template>

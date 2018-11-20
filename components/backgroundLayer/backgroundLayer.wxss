@@ -1,0 +1,111 @@
+
+
+.wx-mask{
+    position: fixed;
+      z-index: 1000;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+  }
+  .wx-dialog{
+      position: fixed;
+      z-index: 5000;
+      min-width: 520rpx;
+      max-width: 520rpx;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      background-color: #FFDD00;
+      text-align: center;
+      border-radius: 16rpx;
+  }
+  .wx-dialog-title{
+      font-size: 32rpx;
+      height: 83rpx;
+      position: relative;
+  }
+  .leftTitleViews{
+      position: absolute;
+      left: -45rpx;
+  }
+  .leftTitleViews image:nth-of-type(1){ width: 80rpx;height: 72rpx;position: absolute;left: 40rpx;z-index: 90;}
+
+  .leftTitleViews image:nth-of-type(2){ width: 358rpx;height: 77rpx;position: absolute;left: 40rpx}
+  .wx-dialog-content{
+      padding: 70rpx 50rpx 10rpx;
+      min-height: 153rpx;
+      font-size: 32rpx;
+      word-wrap: break-word;
+      word-break: break-all;
+      color: #202020;
+  }
+  .wx-dialog-footer{
+      display: flex;
+      align-items: center;
+      position: relative;
+      height: 80rpx;
+      font-size: 34rpx;
+  }
+  .wx-dialog-footer::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      height: 1px;
+      color: #D5D5D6;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+  }
+  .wx-dialog-btn{
+      display: block;
+      -webkit-flex: 1;
+      flex: 1;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      margin-bottom: 20rpx;
+      position: relative;
+  }
+  .wx-dialog-footer .wx-dialog-btn:nth-of-type(1){
+      color: #707070;
+  }
+  .wx-dialog-footer .wx-dialog-btn:nth-of-type(2){
+      color: #000000;
+  }
+  .wx-dialog-footer .wx-dialog-btn:nth-of-type(2):after{
+      content: " ";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2rpx;
+      bottom: 0;
+      border-left: 2rpx solid rgba(32,32,32,0.2);
+      color: #D5D5D6;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: scaleX(0.5);
+      transform: scaleX(0.5);
+  }
+
+  .leftTitleView{
+    width: 320rpx;
+    height: 80rpx;
+    font-size: 32rpx;
+    color: #FFFFFF;
+    position: relative;
+}
+.leftTitleView text{
+    position: absolute;
+    left:121rpx;
+    top:17rpx;
+    z-index: 90;
+    width: 266rpx;
+}
+.fontSize{
+    font-weight: bold;
+}
+    
