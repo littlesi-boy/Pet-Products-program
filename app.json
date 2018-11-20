@@ -1,0 +1,29 @@
+{
+  "pages": [
+
+    "pages/index/index",
+    "pages/my-knapsack/my-knapsack",
+    "pages/my-knapsack-details/my-knapsack-details",
+    "pages/my-knapsack-disguised-dog/my-knapsack-disguised-dog",
+    "pages/updaten-name/updaten-name",    
+    "pages/exchange/exchange",
+    "pages/receiving-address/receiving-address",
+    "pages/awarding-details/awarding-details",
+    "pages/shareAfter/shareAfter",
+    "pages/add-dog/add-dog",
+    "pages/sell-out-dog/sell-out-dog",
+    "pages/disguised-dog/disguised-dog",
+    "pages/details-gifts/details-gifts",
+    "pages/poster-generate/poster-generate",
+    "pages/share-dog/share-dog",
+    "pages/disguised-case/disguised-case",
+    "pages/my-dog/my-dog",
+    "pages/awarding-records/awarding-records"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}
